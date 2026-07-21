@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Rajvi Bheda Vora | Dermatologist & Aesthetic Surgeon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FDF9F3',   // Warm Cream Background
+                            100: '#F3E9D2',  // Soft Tan Accents
+                            200: '#E5C79E',  // Light Tan Separators
+                            500: '#C0A06E',  // Primary Tan/Gold Logo Color
+                            600: '#BF873E',  // Secondary Deep Gold/Brown
+                            900: '#46270E',  // Contrast Dark Luxury Font
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gold-50 text-zinc-800 font-sans antialiased selection:bg-gold-100 selection:text-gold-900">
+
+<!-- Premium Header -->
+<header class="sticky top-0 z-50 bg-[#FFFDF9]/95 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-sm">
+
+    <div class="max-w-[1450px] mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center justify-between h-20 lg:h-24">
+
+            <!-- Logo -->
+            <a href="/" class="flex items-center flex-shrink-0 z-50">
+
+                <img
+                    src="images/RBlogo.png"
+                    alt="Dr. Rajvi Bheda Vora"
+                    class="h-16 lg:h-24 w-auto object-contain transition duration-500 hover:scale-105"
+                >
+
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center">
+
+                <ul class="flex items-center gap-10">
+
+                     <li>
+                        <a href="#home"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Treatments
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#hair"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Hair Restoration
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#locations"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Clinics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/dermrajvi/?hl=en"
+                            target="_blank"
+                            class="flex items-center gap-2 text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+
+                            <i class="fa-brands fa-instagram text-lg"></i>
+
+                            Instagram
+
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Divider -->
+                <div class="mx-8 h-8 w-px bg-[#D4AF37]/30"></div>
+
+                <!-- CTA -->
+                <a href="#contact"
+                    class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-8 py-3.5 text-[14px] font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+
+                    Book Consultation
+
+                </a>
+
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button
+                id="mobile-menu-btn"
+                aria-label="Toggle Navigation Menu"
+                class="lg:hidden z-50 w-11 h-11 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] hover:bg-[#FFF8E6] transition active:scale-95">
+
+                <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div 
+        id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div 
+        id="mobile-menu"
+        class="fixed top-0 right-0 w-[80%] max-w-sm h-screen bg-[#FFFDF9] z-40 pt-28 px-8 pb-10 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden border-l border-[#D4AF37]/20 overflow-y-auto">
+
+        <ul class="flex flex-col gap-6">
+
+            <li>
+                <a href="#home" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#services" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Treatments
+                </a>
+            </li>
+
+            <li>
+                <a href="#hair" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Hair Restoration
+                </a>
+            </li>
+
+            <li>
+                <a href="#locations" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Clinics
+                </a>
+            </li>
+
+            <li class="pt-2 border-t border-[#D4AF37]/20">
+                <a href="https://www.instagram.com/dermrajvi/?hl=en"
+                    target="_blank"
+                    class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+
+                    <i class="fa-brands fa-instagram text-xl text-[#B8860B]"></i>
+
+                    Instagram
+
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Mobile CTA Button -->
+        <div class="pt-8">
+            <a href="#contact"
+                class="mobile-nav-link flex items-center justify-center w-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] py-4 text-[15px] font-semibold tracking-wide text-white shadow-lg transition hover:shadow-xl active:scale-95">
+
+                Book Consultation
+
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function isMenuOpen() {
+            return !mobileMenu.classList.contains('translate-x-full');
+        }
+
+        function closeMenu() {
+            if (!isMenuOpen()) return;
+            mobileMenu.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        }
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            menuIcon.classList.replace('fa-bars', 'fa-xmark');
+        }
+
+        function toggleMenu() {
+            if (isMenuOpen()) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Auto-close menu when scrolling the page
+        window.addEventListener('scroll', () => {
+            if (isMenuOpen()) {
+                closeMenu();
+            }
+        }, { passive: true });
+    });
+</script>
+
+    <!-- Hero Section: Premium Redesign Style -->
+<section id="home" class="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#FFFCF7] via-[#FFF8EC] to-[#F8F2E7]">
+
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-[#E8C76A]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="text-left">
+
+                <!-- Badge -->
+                <div data-aos="fade-down" data-aos-duration="800">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-white/90 backdrop-blur-sm shadow-md border border-[#D4AF37]/30 text-[#B8891F] text-xs sm:text-sm font-semibold mb-6 sm:mb-8">
+                        ★ Dermatologist of the Year Alumna
+                    </span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 data-aos="fade-up" data-aos-duration="900" data-aos-delay="100" class="text-3xl sm:text-5xl lg:text-6xl leading-tight font-serif font-light text-[#2D2A26]">
+                    Evidence-Based Science
+                    <br class="hidden sm:inline">
+                    Meets
+                    <span class="text-[#C69A2D] italic font-normal block sm:inline">
+                        Aesthetic Artistry
+                    </span>
+                </h1>
+
+                <!-- Body Text -->
+                <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="200" class="mt-5 sm:mt-8 text-base sm:text-lg leading-relaxed sm:leading-8 text-gray-600 max-w-xl">
+                    Delivering advanced dermatology, dermatosurgery, and aesthetic
+                    treatments with a patient-first approach. Combining clinical
+                    excellence, modern technology, and personalized care for healthy,
+                    naturally beautiful skin.
+                </p>
+
+                <!-- Stats Grid -->
+                <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="300" class="grid grid-cols-3 gap-3 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-0 border-t sm:border-t-0 border-[#D4AF37]/20">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#B8891F]">5+</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Years Experience</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#B8891F]">5000+</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Happy Patients</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#B8891F]">100+</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm">Treatments</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="400" class="mt-8 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
+                    <a href="#contact"
+                        class="px-8 sm:px-9 py-3.5 sm:py-4 bg-[#C69A2D] hover:bg-[#B8891F] text-white rounded-full font-medium shadow-xl hover:shadow-2xl transition duration-300 text-center text-sm sm:text-base">
+                        Book Appointment
+                    </a>
+
+                    <a href="https://www.instagram.com/dermrajvi/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-8 sm:px-9 py-3.5 sm:py-4 rounded-full border border-[#C69A2D] text-[#B8891F] hover:bg-[#C69A2D] hover:text-white transition duration-300 flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fa-brands fa-instagram"></i>
+                        Instagram
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="relative flex justify-center mt-6 lg:mt-0 px-4 sm:px-8" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+
+                <!-- Decorative Gold Frame -->
+                <div class="absolute -top-4 -left-2 sm:-top-6 sm:-left-2 w-full h-full border-2 border-[#D4AF37]/30 rounded-[30px] sm:rounded-[40px] pointer-events-none"></div>
+
+                <!-- Doctor Photo -->
+                <div class="relative rounded-[30px] sm:rounded-[40px] overflow-hidden shadow-2xl bg-white z-10">
+                    <img src="/images/Dr.Rajvi.jpeg"
+                        class="w-full max-w-xs sm:max-w-md object-cover"
+                        alt="Dr Rajvi Bheda Vora">
+                </div>
+
+                <!-- Floating Experience Badge (Top Left - Desktop & Tablet) -->
+                <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="800"
+                     class="hidden sm:flex absolute -left-4 lg:-left-8 top-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-5 py-3 border border-gold-200/40 items-center gap-3 z-20">
+                    <div class="text-[#C69A2D] text-2xl">🏆</div>
+                    <div>
+                        <p class="font-semibold text-gray-800 text-sm">5+ Years</p>
+                        <span class="text-gray-500 text-xs">Clinical Experience</span>
+                    </div>
+                </div>
+
+                <!-- Floating Patient Card (Bottom Right - Desktop & Tablet) -->
+                <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="800"
+                     class="hidden sm:block absolute -right-4 lg:-right-8 bottom-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-5 py-3.5 border border-gold-200/40 z-20">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#FFF4DA] flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-user-check text-[#C69A2D] text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm">5000+</h4>
+                            <p class="text-xs text-gray-500">Happy Patients</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services -->
+<section id="services" class="relative py-28 bg-gradient-to-b from-white via-[#FAF8F5] to-white border-b border-gold-200/20 overflow-hidden">
+    
+    <!-- Ambient Radial Glow Effects -->
+    <div class="absolute top-1/4 left-10 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-[#E8C76A]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="h-[1px] w-8 bg-[#A97C3A]/40"></span>
+                <span class="text-xs uppercase tracking-[0.35em] text-[#A97C3A] font-semibold block">Clinical Excellence</span>
+                <span class="h-[1px] w-8 bg-[#A97C3A]/40"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 tracking-wide font-light">
+                Signature Procedures & Treatments
+            </h2>
+            <div class="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#A97C3A] to-transparent mx-auto mt-6"></div>
+        </div>
+
+        <!-- Treatment Navigation Tabs -->
+        <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="900" 
+             class="grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-white/80 backdrop-blur-md rounded-none max-w-4xl mx-auto mb-16 border border-[#A97C3A]/20 shadow-[0_10px_30px_-10px_rgba(169,124,58,0.08)]">
+            
+            <button onclick="switchTab('skin')" id="tab-skin" 
+                    class="tab-btn flex flex-col items-center justify-center py-4 px-3 bg-gradient-to-b from-[#2D2A26] to-[#1A1816] text-[#D4AF37] border border-[#A97C3A]/40 shadow-md transition-all duration-300 group focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Face & Skin</span>
+            </button>
+            
+            <button onclick="switchTab('hair')" id="tab-hair" 
+                    class="tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Hair & Scalp</span>
+            </button>
+            
+            <button onclick="switchTab('nails')" id="tab-nails" 
+                    class="tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Nail Care</span>
+            </button>
+            
+            <button onclick="switchTab('surgery')" id="tab-surgery" 
+                    class="tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Dermatosurgery</span>
+            </button>
+        </div>
+
+        <!-- Interactive Layout Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Side: Interactive Dynamic Subcategory Cards with Individual Images -->
+            <div id="treatment-content" 
+                 data-aos="fade-right" 
+                 data-aos-delay="250" 
+                 data-aos-duration="900" 
+                 class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 transition-all duration-500">
+                <!-- Content injected dynamically via JavaScript -->
+            </div>
+
+            <!-- Right Side: Sticky Visual Showcase Image Container -->
+            <div class="lg:col-span-5 lg:sticky lg:top-32" data-aos="fade-left" data-aos-delay="350" data-aos-duration="900">
+                <div class="group relative overflow-hidden bg-white border border-[#A97C3A]/30 p-3 shadow-[0_20px_50px_-15px_rgba(169,124,58,0.12)] rounded-none transition-all duration-500">
+                    
+                    <!-- Decorative Golden Frame Inset -->
+                    <div class="absolute inset-5 border border-[#A97C3A]/20 pointer-events-none z-20 group-hover:border-[#A97C3A]/60 transition-colors duration-500"></div>
+
+                    <div class="relative overflow-hidden aspect-[4/5] bg-zinc-900">
+                        <!-- Image Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-80 group-hover:opacity-70 transition-opacity duration-500"></div>
+                        
+                        <img id="showcase-img" 
+                             src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" 
+                             alt="Clinical Skincare Treatment Showcase" 
+                             class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                        />
+                        
+                        <!-- Caption Overlay -->
+                        <div class="absolute bottom-8 left-8 right-8 z-20 text-white space-y-1">
+                            <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-[#D4AF37] block">Bespoke Clinical Care</span>
+                            <p id="showcase-caption" class="font-serif text-xl sm:text-2xl font-light tracking-wide drop-shadow-md text-zinc-100">
+                                Advanced Medical Esthetics
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</section>
+
+<script>
+    const treatmentsData = {
+        skin: {
+            img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800",
+            caption: "Advanced Facial & Epidermal Therapies",
+            items: [
+                { id: "01", tag: "Injectables", title: "Botox & Fillers", img: "/images/botox.jpg", desc: "Target wrinkles and restore natural facial contours cleanly with premium FDA-approved relaxers and dynamic volume augmentations." },
+                { id: "02", tag: "Advanced Glow", title: "Vampire & Hollywood Facials", img: "/images/hollywoodfacial.jpg", desc: "Utilize medical microneedling paired with carbon laser toning to trigger complete deep-dermal structural remodeling." },
+                { id: "03", tag: "Exfoliation", title: "Chemical Peels & Microdermabrasion", img: "/images/chemicalpeel.jpg", desc: "Medical grade fruit acid treatments structured to systematically shed hyperpigmented layers and reveal smoother cells." },
+                { id: "04", tag: "Glass Skin", title: "Hydrafacial & Korean Glow", img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600", desc: "Multi-step medical hydro-infusions formulated to maximize hydration levels, extract impurities, and lock in long-term luminescence." }
+            ]
+        },
+        hair: {
+            img: "/images/hairtreatment.jpg",
+            caption: "Advanced Trichology & Follicular Restoration",
+            items: [
+                { id: "01", tag: "Regeneration", title: "PRP & GFC Therapy", img: "/images/GFC.jpg", desc: "Autologous growth factor concentrations isolated meticulously to jumpstart miniaturized hair roots into active growth phases." },
+                { id: "02", tag: "Nutritional", title: "Stem Cell & Mesotherapy", img: "/images/stemcell.jpg", desc: "Micro-infusion of potent hair vitamins and botanical co-factors straight to the follicular bed to stall acute hair fall." },
+                { id: "03", tag: "Surgical", title: "FUE Hair Transplant", img: "/images/FUE.jpg", desc: "Precise, follicular unit extractions mapped out strategically to re-establish natural hairline thickness and density." },
+                { id: "04", tag: "Scalp Care", title: "Pattern Baldness & Dandruff Control", img: "/images/dandruff.jpg", desc: "Comprehensive clinical diagnostic plans targeted at managing chronic micro-flaking and long-term thinning cycles." }
+            ]
+        },
+        nails: {
+            img: "/images/nailtreatment.jpg",
+            caption: "Medical Podiatry & Ungual Therapy",
+            items: [
+                { id: "01", tag: "Therapeutic", title: "Nail Avulsion & Management", img: "https://images.unsplash.com/photo-1604654894610-df490998cd10?auto=format&fit=crop&q=80&w=600", desc: "Clinical procedures safely managing painful ingrown nail edges and underlying matrices under controlled comfort." },
+                { id: "02", tag: "Infection Path", title: "Onycho-Mycosis Anti-fungal Care", img: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600", desc: "Targeted localized protocols tailored to target and cleanly clear stubborn fungal setups buried deep inside the nail bed." },
+                { id: "03", tag: "Repair", title: "Brittle Nail Matrix Correction", img: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=600", desc: "Medical keratin and element micro-varnishes applied systematically to reconstruct fragile, cracking plate structures." }
+            ]
+        },
+        surgery: {
+            img: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=800",
+            caption: "Precision Dermatosurgical Interventions",
+            items: [
+                { id: "01", tag: "Ablation", title: "Mole & Wart Removal", img: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=600", desc: "High-frequency radiofrequency protocols cleanly vaporizing unwanted benign surface elements without altering margins." },
+                { id: "02", tag: "Reconstructive", title: "Cyst & Lipoma Excision", img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600", desc: "Sterile micro-incisional enucleations built to fully resolve deep dermal lumps while respecting subtle surface tension lines." },
+                { id: "03", tag: "Aesthetic Correction", title: "Scar Revision & Ear Lobe Repair", img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600", desc: "Micro-suturing technologies and laser resurfacing designed to visually downplay old wounds and fix split tissue lobes." }
+            ]
+        }
+    };
+
+    function switchTab(category) {
+        // 1. Reset all tab styles
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.className = "tab-btn flex flex-col items-center justify-center py-4 px-2 text-zinc-500 hover:text-zinc-800 transition-all focus:outline-none";
+        });
+
+        // 2. Style active tab
+        const activeTab = document.getElementById(`tab-${category}`);
+        activeTab.className = "tab-btn flex flex-col items-center justify-center py-4 px-2 bg-gradient-to-b from-[#2D2A26] to-[#1A1816] text-[#D4AF37] border border-[#A97C3A]/40 shadow-md transition-all group focus:outline-none";
+
+        // 3. Update Text Content Cards with dynamic image banners
+        const contentContainer = document.getElementById('treatment-content');
+        contentContainer.style.opacity = 0;
+        
+        setTimeout(() => {
+            contentContainer.innerHTML = treatmentsData[category].items.map(item => `
+                <div class="bg-white border border-zinc-100 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#A97C3A]/30 hover:shadow-xl hover:shadow-[#A97C3A]/5 group">
+                    <div>
+                        <!-- Dynamic Card Image Header -->
+                        <div class="relative h-36 w-full overflow-hidden bg-zinc-900">
+                            <img src="${item.img}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/30"></div>
+                            <span class="absolute top-3 left-3 text-[9px] tracking-[0.2em] uppercase font-semibold text-[#A97C3A] bg-white/90 backdrop-blur-sm px-2.5 py-0.5 border border-[#A97C3A]/20">${item.tag}</span>
+                            <span class="absolute top-2 right-3 text-white/80 font-serif text-xl drop-shadow">${item.id}</span>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-5">
+                            <h3 class="font-serif text-lg text-zinc-800 mb-2 tracking-wide font-medium group-hover:text-[#A97C3A] transition-colors">${item.title}</h3>
+                            <p class="text-xs text-zinc-500 leading-relaxed font-light mb-4">
+                                ${item.desc}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Footer Link -->
+                    <div class="px-5 pb-5 pt-0">
+                        <a href="#contact" class="text-[10px] uppercase tracking-widest font-semibold text-zinc-800 hover:text-[#A97C3A] transition-colors inline-flex items-center gap-1.5 group/btn">
+                            Book Consultation <span class="transform transition-transform group-hover/btn:translate-x-1">→</span>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+            contentContainer.style.opacity = 1;
+        }, 150);
+
+        // 4. Update the Showcase Image and corresponding caption
+        const imgElement = document.getElementById('showcase-img');
+        const captionElement = document.getElementById('showcase-caption');
+        
+        imgElement.style.opacity = 0.3;
+        setTimeout(() => {
+            imgElement.src = treatmentsData[category].img;
+            captionElement.innerText = treatmentsData[category].caption;
+            imgElement.style.opacity = 1;
+        }, 150);
+    }
+
+    // Initialize with 'skin' configuration immediately on launch
+    document.addEventListener('DOMContentLoaded', () => {
+        switchTab('skin');
+    });
+</script>
+
+    <!-- Premium Clean Grid Consulting Locations Section -->
+<section id="locations" class="relative bg-gradient-to-b from-white via-gold-50/20 to-white py-28 border-b border-gold-200/30 overflow-hidden">
+    <!-- Subtle Background Radial Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-200/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center space-y-3 mb-20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex items-center justify-center gap-2">
+                <span class="h-[1px] w-6 bg-gold-400"></span>
+                <span class="text-xs font-semibold uppercase tracking-[0.35em] text-gold-600">Affiliated Clinics & Hospitals</span>
+                <span class="h-[1px] w-6 bg-gold-400"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif text-gold-950 uppercase tracking-[0.2em] font-light">Consulting At</h2>
+            <div class="w-12 h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mt-3"></div>
+        </div>
+
+        <!-- Locations Grid (All 8 Locations) -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            
+            <!-- Location 1: Curis Life Clinic (Andheri) -->
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-location-dot text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Curis Life Clinic</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Andheri</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 2: Criticare Asia Hospital (Andheri) -->
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-hospital text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Criticare Asia Hospital</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Andheri</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 3: SBS Hospital (Andheri) -->
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-hospital text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">SBS Hospital</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Andheri</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 4: Bluebell Hospital (Jogeshwari) -->
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-hospital text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Bluebell Hospital</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Jogeshwari</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 5: Shree Eye Clinic (Goregaon) -->
+            <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-location-dot text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Shree Eye Clinic</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Goregaon</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 6: Lifeline Hospital (Goregaon) -->
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-hospital text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Lifeline Hospital</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Goregaon</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 7: Oscar Hospital (Goregaon) -->
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-hospital text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Oscar Hospital</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Goregaon</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+            <!-- Location 8: Sainit Star (Oshiwara) -->
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800"
+                 class="group relative bg-white/80 backdrop-blur-sm p-8 border border-gold-200/40 hover:border-gold-500/80 shadow-[0_4px_25px_-5px_rgba(192,160,110,0.06)] hover:shadow-[0_12px_30px_-5px_rgba(192,160,110,0.18)] transition-all duration-500 rounded-sm flex flex-col justify-between min-h-[190px] overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-0 bg-gold-500 group-hover:h-full transition-all duration-500"></div>
+                <div>
+                    <div class="w-10 h-10 rounded-full bg-gold-50 border border-gold-200/60 text-gold-600 flex items-center justify-center mb-5 group-hover:bg-gold-500 group-hover:text-white group-hover:border-gold-500 transition-all duration-500 shadow-sm">
+                        <i class="fa-solid fa-location-dot text-xs"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-medium text-zinc-900 group-hover:text-gold-950 transition-colors">Sainit Star</h3>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-gold-100/60 mt-4">
+                    <span class="text-[11px] font-bold text-gold-600 tracking-[0.2em] uppercase">Oshiwara</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Action Call & Contact Integration Footer -->
+    <section id="contact" class="bg-gold-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <h2 class="text-3xl sm:text-4xl font-serif font-light text-gold-100 tracking-wide uppercase">Begin Your Skin Journey</h2>
+            <p class="text-sm sm:text-base text-zinc-300 max-w-xl mx-auto leading-relaxed">
+                Connect directly with clinical branches to align appointments around specialized treatment scheduling slots.
+            </p>
+            
+            <div class="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-4 text-center">
+                <div class="p-4 border border-zinc-700/60 bg-black/10">
+                    <i class="fa-solid fa-phone text-gold-500 mb-2 block text-lg"></i>
+                    <span class="text-xs text-zinc-400 block uppercase tracking-wider">Phone Booking</span>
+                    <a href="tel:+919137789949" class="text-sm font-semibold tracking-wide text-white block mt-1">+91 91377 89949</a>
+                </div>
+                <div class="p-4 border border-zinc-700/60 bg-black/10">
+                    <i class="fa-solid fa-envelope text-gold-500 mb-2 block text-lg"></i>
+                    <span class="text-xs text-zinc-400 block uppercase tracking-wider">Direct Email</span>
+                    <a href="mailto:rajvi.db@gmail.com" class="text-sm font-semibold tracking-wide text-white block mt-1 break-all">rajvi.db@gmail.com</a>
+                </div>
+                <div class="p-4 border border-zinc-700/60 bg-black/10">
+                    <i class="fa-brands fa-instagram text-gold-500 mb-2 block text-lg"></i>
+                    <span class="text-xs text-zinc-400 block uppercase tracking-wider">Social Education</span>
+                    <a href="https://www.instagram.com/dermrajvi/?hl=en" target="_blank" class="text-sm font-semibold tracking-wide text-white block mt-1">@dermrajvi</a>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-zinc-800 text-[11px] text-zinc-500 space-y-2">
+                <p>* Disclaimer: Clinical treatment results may differ dynamically based on individual metabolic histories and background indicators.</p>
+                <p>&copy; 2026 Dr. Rajvi Bheda Vora. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="bg-[#1A1816] text-zinc-300 border-t border-[#D4AF37]/20 font-sans">
+    
+    <!-- Top Decorative Gold Accent Line -->
+    <div class="h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-40"></div>
+
+    <div class="max-w-[1450px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+            
+            <!-- Column 1: Brand & Bio (4 Cols) -->
+            <div class="lg:col-span-4 space-y-6">
+                <a href="#home" class="inline-block">
+                    <!-- Brand Logo / Name -->
+                    <h3 class="font-serif text-2xl lg:text-3xl font-light text-white tracking-wide">
+                        Dr. Rajvi Bheda Vora
+                    </h3>
+                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#B8891F] mt-1">
+                        Dermatologist & Aesthetic Surgeon
+                    </p>
+                </a>
+
+                <p class="text-xs text-zinc-400 leading-relaxed max-w-sm">
+                    Combining evidence-based medical science with aesthetic artistry to deliver personalized skin, hair, and dermatosurgical care.
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="https://www.instagram.com/dermrajvi/?hl=en" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </a>
+                    <a href="mailto:rajvi.db@gmail.com" 
+                       aria-label="Email"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                    </a>
+                    <a href="tel:+919137789949" 
+                       aria-label="Phone"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links (2 Cols) -->
+            <div class="lg:col-span-2 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Navigation
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-2.5 text-xs">
+                    <li>
+                        <a href="#home" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">About Doctor</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Treatments</a>
+                    </li>
+                    <li>
+                        <a href="#hair" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Hair Restoration</a>
+                    </li>
+                    <li>
+                        <a href="#locations" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Clinic Locations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Key Treatments (3 Cols) -->
+            <div class="lg:col-span-3 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Specialties
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-2.5 text-xs text-zinc-400">
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Botox & Facial Dermal Fillers
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> PRP & GFC Hair Restoration
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Carbon Laser & Vampire Facials
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> FUE Hair Transplants
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Precision Dermatosurgery
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Clinical Locations (3 Cols) -->
+            <div class="lg:col-span-3 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Consulting Locations
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Goregaon:</strong> Shree Eye Clinic, Lifeline Hospital, Oscar Hospital</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Oshiwara:</strong> Sainit Star</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Divider & Copyright Sub-Footer -->
+        <div class="mt-16 pt-8 border-t border-zinc-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[11px] text-zinc-500">
+            <p>
+                &copy; 2026 Dr. Rajvi Bheda Vora. All Rights Reserved.
+            </p>
+            <p class="text-[10px] max-w-md leading-relaxed text-zinc-500">
+                * Disclaimer: Clinical treatment results may differ dynamically based on individual metabolic histories and diagnostic factors.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
