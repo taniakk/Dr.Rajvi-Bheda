@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Transformations & Results | Dr. Rajvi Bheda Vora</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FFFDF9',
+                            100: '#FFF8E6',
+                            200: '#F8F2E7',
+                            300: '#E8C76A',
+                            400: '#D4AF37',
+                            500: '#C69A2D',
+                            600: '#B8891F',
+                            700: '#B8860B',
+                            800: '#A97C3A',
+                            900: '#2D2A26',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Precision Styling for Before/After Slider */
+        .img-comp-container {
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        .img-comp-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-comp-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            overflow: hidden;
+            width: 50%;
+            z-index: 10;
+        }
+
+        .img-comp-overlay img {
+            max-width: none !important;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-comp-slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background-color: #D4AF37;
+            cursor: ew-resize;
+            z-index: 20;
+            transform: translateX(-50%);
+        }
+
+        .img-comp-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            background-color: #FFFDF9;
+            border: 2px solid #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B8860B;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease;
+        }
+
+        .img-comp-container:hover .img-comp-button {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-gold-50 text-zinc-800 font-sans antialiased selection:bg-gold-100 selection:text-gold-900">
+
+<!-- Premium Header -->
+<header class="sticky top-0 z-50 bg-[#FFFDF9]/95 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-sm">
+
+    <div class="max-w-[1450px] mx-auto px-6 lg:px-10">
+
+        <div class="flex items-center justify-between h-20 lg:h-24">
+
+            <!-- Logo -->
+            <a href="/" class="flex items-center flex-shrink-0 z-50">
+
+                <img
+                    src="images/RBlogo.png"
+                    alt="Dr. Rajvi Bheda Vora"
+                    class="h-16 lg:h-24 w-auto object-contain transition duration-500 hover:scale-105"
+                >
+
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center">
+
+                <ul class="flex items-center gap-10">
+
+                     <li>
+                        <a href="/index.html#home"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/index.html#about"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/index.html#services"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Treatments
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/index.html#glowing"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Skin Secrets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/index.html#locations"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Clinics
+                        </a>
+                    </li>
+
+                       <li>
+                        <a href="/beforeafter.html"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Patient Transformations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/dermrajvi/?hl=en"
+                            target="_blank"
+                            class="flex items-center gap-2 text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+
+                            <i class="fa-brands fa-instagram text-lg"></i>
+
+                            Instagram
+
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Divider -->
+                <div class="mx-8 h-8 w-px bg-[#D4AF37]/30"></div>
+
+                <!-- CTA -->
+                <a href="/contact.html"
+                    class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-8 py-3.5 text-[14px] font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+
+                    Book Consultation
+
+                </a>
+
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button
+                id="mobile-menu-btn"
+                aria-label="Toggle Navigation Menu"
+                class="lg:hidden z-50 w-11 h-11 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] hover:bg-[#FFF8E6] transition active:scale-95">
+
+                <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div 
+        id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div 
+        id="mobile-menu"
+        class="fixed top-0 right-0 w-[80%] max-w-sm h-screen bg-[#FFFDF9] z-40 pt-28 px-8 pb-10 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden border-l border-[#D4AF37]/20 overflow-y-auto">
+
+        <ul class="flex flex-col gap-6">
+
+            <li>
+                <a href="/index.html" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/index.html#about" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="/index.html#services" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Treatments
+                </a>
+            </li>
+
+            <li>
+                <a href="/index.html#glowing" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Skin Secrets
+                </a>
+            </li>
+
+            <li>
+                <a href="/index.html#locations" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Clinics
+                </a>
+            </li>
+
+             <li>
+                <a href="/beforeafter.html" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Patient Transformations
+                </a>
+            </li>
+
+            <li class="pt-2 border-t border-[#D4AF37]/20">
+                <a href="https://www.instagram.com/dermrajvi/?hl=en"
+                    target="_blank"
+                    class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+
+                    <i class="fa-brands fa-instagram text-xl text-[#B8860B]"></i>
+
+                    Instagram
+
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Mobile CTA Button -->
+        <div class="pt-8">
+            <a href="#contact"
+                class="mobile-nav-link flex items-center justify-center w-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] py-4 text-[15px] font-semibold tracking-wide text-white shadow-lg transition hover:shadow-xl active:scale-95">
+
+                Book Consultation
+
+            </a>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function isMenuOpen() {
+            return !mobileMenu.classList.contains('translate-x-full');
+        }
+
+        function closeMenu() {
+            if (!isMenuOpen()) return;
+            mobileMenu.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            menuIcon.classList.replace('fa-xmark', 'fa-bars');
+        }
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            menuIcon.classList.replace('fa-bars', 'fa-xmark');
+        }
+
+        function toggleMenu() {
+            if (isMenuOpen()) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Auto-close menu when scrolling the page
+        window.addEventListener('scroll', () => {
+            if (isMenuOpen()) {
+                closeMenu();
+            }
+        }, { passive: true });
+    });
+</script>
+
+    <!-- Hero Section -->
+    <section class="relative py-16 sm:py-20 bg-gradient-to-br from-[#FFFCF7] via-[#FFF8EC] to-[#F8F2E7] border-b border-[#D4AF37]/20 overflow-hidden">
+        <div class="absolute top-0 left-0 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 shadow-sm border border-[#D4AF37]/30 text-[#B8891F] text-xs font-semibold mb-4">
+                ★ Proven Clinical Outcomes
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-light text-[#2D2A26] tracking-wide">
+                Clinical <span class="text-[#C69A2D] italic font-normal">Transformations</span>
+            </h1>
+            <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto">
+                Explore real, unretouched clinical results achieved through evidence-based dermatological, procedural, and minor surgical treatments.
+            </p>
+        </div>
+    </section>
+
+    <!-- Transformations Gallery Section -->
+    <section class="py-20 bg-gradient-to-b from-white via-[#FAF8F5] to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-16">
+                <button onclick="filterResults('all', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37] bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white shadow-md transition-all">
+                    All Transformations
+                </button>
+                <button onclick="filterResults('dermatology', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
+                    Medical Dermatology
+                </button>
+                <button onclick="filterResults('surgical', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
+                    Dermatosurgery & Procedures
+                </button>
+            </div>
+
+            <!-- Transformations Grid (2 Cards Per Row) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                
+                <!-- CARD 1: XANTHELASMA PALPEBRARUM -->
+                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/xanthelesmaafter.jfif" alt="After Xanthelasma Removal" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/xanthelesmabefore.jfif" alt="Before Xanthelasma Removal">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Radiofrequency / TCA Ablation</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Xanthelasma Palpebrarum</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Precision removal of periorbital cholesterol deposits with minimal scar formation and full eyelid tissue preservation.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: NAIL LICHEN PLANUS -->
+                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/naillitchen2.jpeg" alt="After Nail Lichen Planus Treatment" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/naillitchen.jpeg" alt="Before Nail Lichen Planus Treatment">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Intralesional Therapy & Topicals</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Nail Lichen Planus</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Targeted medical management arresting matrix destruction and promoting healthy, smooth nail plate regrowth.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 3: ACNE TREATMENT -->
+                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/acneafter.jpeg" alt="After Acne Treatment" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/dermatosurgery.jfif" alt="Before Acne Treatment">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Medical Acne Management</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Severe Inflammatory Acne</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Comprehensive regimen addressing active inflammatory papules, pustules, and post-inflammatory hyperpigmentation.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 4: EARLOBE REPAIR -->
+                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/earloneafter.jfif" alt="After Earlobe Repair" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/earbefore.jpeg" alt="Before Earlobe Repair">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Surgical Reconstruction</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Split Earlobe Repair</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical correction of torn or elongated earlobe piercings with fine suturing for seamless tissue closure.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 5: KELOID DEBULKING -->
+                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/keloidafter.jpeg" alt="After Keloid Debulking" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/keloidbefore.jpeg" alt="Before Keloid Debulking">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Debulking & Intralesional Injections</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Keloid Scar Debulking</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical debulking combined with targeted intralesional therapy to flatten fibrous scar tissue and prevent recurrence.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 6: PYOGENIC GRANULOMA -->
+                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                    <div class="img-comp-container aspect-[16/10] w-full">
+                        <img src="images/pyogenicafter.jfif" alt="After Pyogenic Granuloma Cautery" class="w-full h-full object-cover">
+                        <div class="img-comp-overlay">
+                            <img src="images/pyogenicbefore.jfif" alt="Before Pyogenic Granuloma Cautery">
+                        </div>
+                        <div class="img-comp-slider">
+                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Excision & Electrocautery</span>
+                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Pyogenic Granuloma Removal</h3>
+                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Complete excision and base cauterization of vascular lobular capillary hemangioma to eliminate bleeding and ensure clean healing.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Disclaimer Notice -->
+            <div class="mt-16 bg-[#FFF8EC] border border-[#D4AF37]/30 p-6 rounded-2xl max-w-3xl mx-auto text-center">
+                <p class="text-xs text-zinc-600 leading-relaxed">
+                    <strong class="text-zinc-800">Clinical Disclaimer:</strong> Individual treatment outcomes may vary based on anatomical differences, medical history, underlying dermatological conditions, and adherence to post-procedure care protocols. All clinical photographs are displayed with patient authorization.
+                </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-12 text-center">
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-10 py-4 text-sm font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5">
+                    Schedule Your Personalized Consultation
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Comparison Slider & Mobile Navigation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Menu Toggle logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        menuIcon.className = 'fa-solid fa-bars text-xl';
+                    } else {
+                        menuIcon.className = 'fa-solid fa-xmark text-xl';
+                    }
+                });
+            }
+
+            // Before/After Slider Core Logic
+            const containers = document.querySelectorAll(".img-comp-container");
+
+            containers.forEach((container) => {
+                const overlay = container.querySelector(".img-comp-overlay");
+                const slider = container.querySelector(".img-comp-slider");
+                const overlayImg = overlay.querySelector("img");
+
+                function syncDimensions() {
+                    const width = container.offsetWidth;
+                    const height = container.offsetHeight;
+                    overlayImg.style.width = width + "px";
+                    overlayImg.style.height = height + "px";
+                }
+
+                syncDimensions();
+                
+                overlayImg.addEventListener("load", syncDimensions);
+                window.addEventListener("resize", syncDimensions);
+
+                let isDragging = false;
+
+                function getXPos(e) {
+                    const rect = container.getBoundingClientRect();
+                    let x = (e.pageX || (e.touches && e.touches[0].pageX)) - rect.left - window.pageXOffset;
+                    if (x < 0) x = 0;
+                    if (x > rect.width) x = rect.width;
+                    return x;
+                }
+
+                function updateSlider(x) {
+                    overlay.style.width = x + "px";
+                    slider.style.left = x + "px";
+                }
+
+                function onStart(e) {
+                    e.preventDefault();
+                    isDragging = true;
+                    updateSlider(getXPos(e));
+                }
+
+                function onEnd() {
+                    isDragging = false;
+                }
+
+                function onMove(e) {
+                    if (!isDragging) return;
+                    updateSlider(getXPos(e));
+                }
+
+                slider.addEventListener("mousedown", onStart);
+                container.addEventListener("mousedown", onStart);
+                window.addEventListener("mouseup", onEnd);
+                window.addEventListener("mousemove", onMove);
+
+                slider.addEventListener("touchstart", onStart, { passive: false });
+                container.addEventListener("touchstart", onStart, { passive: false });
+                window.addEventListener("touchend", onEnd);
+                window.addEventListener("touchmove", onMove, { passive: false });
+            });
+        });
+
+        // Dynamic Category Filtering Logic
+        function filterResults(category, clickedBtn) {
+            const cards = document.querySelectorAll('.result-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all";
+            });
+
+            clickedBtn.className = "filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37] bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white shadow-md transition-all";
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            window.dispatchEvent(new Event('resize'));
+        }
+    </script>
+
+    <!-- Footer Section -->
+<footer class="bg-[#1A1816] text-zinc-300 border-t border-[#D4AF37]/20 font-sans">
+    
+    <!-- Top Decorative Gold Accent Line -->
+    <div class="h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-40"></div>
+
+    <div class="max-w-[1450px] mx-auto px-6 lg:px-10 py-16 lg:py-20">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+            
+            <!-- Column 1: Brand & Bio (4 Cols) -->
+            <div class="lg:col-span-4 space-y-6">
+                <a href="#home" class="inline-block">
+                    <!-- Brand Logo / Name -->
+                    <h3 class="font-serif text-2xl lg:text-3xl font-light text-white tracking-wide">
+                        Dr. Rajvi Bheda Vora
+                    </h3>
+                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#B8891F] mt-1">
+                        Dermatologist & Aesthetic Surgeon
+                    </p>
+                </a>
+
+                <p class="text-xs text-zinc-400 leading-relaxed max-w-sm">
+                    Combining evidence-based medical science with aesthetic artistry to deliver personalized skin, hair, and dermatosurgical care.
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="https://www.instagram.com/dermrajvi/?hl=en" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </a>
+                    <a href="mailto:rajvi.db@gmail.com" 
+                       aria-label="Email"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                    </a>
+                    <a href="tel:+919137789949" 
+                       aria-label="Phone"
+                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links (2 Cols) -->
+            <div class="lg:col-span-2 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Navigation
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-2.5 text-xs">
+                    <li>
+                        <a href="#home" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">About Doctor</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Treatments</a>
+                    </li>
+                    <li>
+                        <a href="#glowing" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Skin Secrets</a>
+                    </li>
+                    <li>
+                        <a href="#locations" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Clinic Locations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Key Treatments (3 Cols) -->
+            <div class="lg:col-span-3 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Specialties
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-2.5 text-xs text-zinc-400">
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Botox & Facial Dermal Fillers
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> PRP & GFC Hair Restoration
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Carbon Laser & Vampire Facials
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> FUE Hair Transplants
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-[#B8891F]">•</span> Precision Dermatosurgery
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Clinical Locations (3 Cols) -->
+            <div class="lg:col-span-3 space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-white font-medium">
+                    Consulting Locations
+                </h4>
+                <div class="w-6 h-[1px] bg-[#B8891F]"></div>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Goregaon:</strong> Shree Eye Clinic, Lifeline Hospital, Oscar Hospital</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Oshiwara:</strong> Sainit Star</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Divider & Copyright Sub-Footer -->
+        <div class="mt-16 pt-8 border-t border-zinc-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[11px] text-zinc-500">
+            <p>
+                &copy; 2026 Dr. Rajvi Bheda Vora. All Rights Reserved.
+            </p>
+            <p class="text-[10px] max-w-md leading-relaxed text-zinc-500">
+                * Disclaimer: Clinical treatment results may differ dynamically based on individual metabolic histories and diagnostic factors.
+            </p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

@@ -31,6 +31,12 @@
     <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body class="bg-gold-50 text-zinc-800 font-sans antialiased selection:bg-gold-100 selection:text-gold-900">
 
@@ -79,9 +85,9 @@
                     </li>
 
                     <li>
-                        <a href="#hair"
+                        <a href="#glowing"
                             class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Hair Restoration
+                            Skin Secrets
                         </a>
                     </li>
 
@@ -89,6 +95,13 @@
                         <a href="#locations"
                             class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
                             Clinics
+                        </a>
+                    </li>
+
+                       <li>
+                        <a href="/beforeafter.html"
+                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+                            Patient Transformations
                         </a>
                     </li>
 
@@ -110,7 +123,7 @@
                 <div class="mx-8 h-8 w-px bg-[#D4AF37]/30"></div>
 
                 <!-- CTA -->
-                <a href="#contact"
+                <a href="/contact.html"
                     class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-8 py-3.5 text-[14px] font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
 
                     Book Consultation
@@ -165,14 +178,20 @@
             </li>
 
             <li>
-                <a href="#hair" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Hair Restoration
+                <a href="#glowing" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Skin Secrets
                 </a>
             </li>
 
             <li>
                 <a href="#locations" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
                     Clinics
+                </a>
+            </li>
+
+             <li>
+                <a href="/beforeafter.html" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+                    Patient Transformations
                 </a>
             </li>
 
@@ -257,7 +276,7 @@
     });
 </script>
 
-    <!-- Hero Section: Premium Redesign Style -->
+<!-- Hero Section: Premium Redesign Style -->
 <section id="home" class="relative overflow-hidden py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#FFFCF7] via-[#FFF8EC] to-[#F8F2E7]">
 
     <!-- Decorative Background Elements -->
@@ -314,7 +333,7 @@
 
                 <!-- Action Buttons -->
                 <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="400" class="mt-8 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
-                    <a href="#contact"
+                    <a href="/contact.html"
                         class="px-8 sm:px-9 py-3.5 sm:py-4 bg-[#C69A2D] hover:bg-[#B8891F] text-white rounded-full font-medium shadow-xl hover:shadow-2xl transition duration-300 text-center text-sm sm:text-base">
                         Book Appointment
                     </a>
@@ -343,7 +362,7 @@
                         alt="Dr Rajvi Bheda Vora">
                 </div>
 
-                <!-- Floating Experience Badge (Top Left - Desktop & Tablet) -->
+                <!-- Floating Experience Badge -->
                 <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="800"
                      class="hidden sm:flex absolute -left-4 lg:-left-8 top-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-5 py-3 border border-gold-200/40 items-center gap-3 z-20">
                     <div class="text-[#C69A2D] text-2xl">🏆</div>
@@ -353,7 +372,7 @@
                     </div>
                 </div>
 
-                <!-- Floating Patient Card (Bottom Right - Desktop & Tablet) -->
+                <!-- Floating Patient Card -->
                 <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="800"
                      class="hidden sm:block absolute -right-4 lg:-right-8 bottom-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl px-5 py-3.5 border border-gold-200/40 z-20">
                     <div class="flex items-center gap-3">
@@ -373,6 +392,131 @@
 
     </div>
 
+</section>
+
+<!-- About Section -->
+<section id="about" class="relative py-24 sm:py-28 bg-gradient-to-b from-white via-gold-50/40 to-white border-b border-[#D4AF37]/20 overflow-hidden">
+    
+    <!-- Decorative Ambient Glows -->
+    <div class="absolute top-1/3 -left-20 w-80 h-80 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-0 w-96 h-96 bg-[#E8C76A]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            <!-- Left Column: Doctor Profile Picture Frame -->
+            <div class="lg:col-span-5 relative" data-aos="fade-right" data-aos-duration="1000">
+                
+                <!-- Gold Layered Frame -->
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="absolute -inset-3 border border-[#D4AF37]/30 rounded-2xl transform rotate-2 pointer-events-none"></div>
+                    <div class="absolute -inset-3 border border-[#B8860B]/20 rounded-2xl transform -rotate-1 pointer-events-none"></div>
+                    
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-white border border-[#D4AF37]/30">
+                        <img src="images/about.webp" alt="Dr. Rajvi Bheda Vora" class="w-full h-auto object-cover object-center max-h-[520px]">
+                        
+                        <!-- Overlay Tag -->
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#2D2A26] via-[#2D2A26]/80 to-transparent p-6 text-white">
+                            <h3 class="font-serif text-2xl font-light tracking-wide text-white">Dr. Rajvi Bheda Vora</h3>
+                            <p class="text-xs uppercase tracking-[0.2em] text-[#D4AF37] font-medium mt-1">MBBS, DDVL • Dermatologist & Aesthetic Surgeon</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Professional Bio & Qualifications -->
+            <div class="lg:col-span-7 space-y-8" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                
+                <!-- Subheader & Heading -->
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="h-[1px] w-8 bg-[#B8860B]"></span>
+                        <span class="text-xs uppercase tracking-[0.3em] text-[#B8860B] font-semibold block">About The Specialist</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 font-light leading-tight">
+                        Compassionate Care Driven by <span class="text-[#B8860B] italic font-normal">Clinical Precision</span>
+                    </h2>
+                </div>
+
+                <!-- Short Bio -->
+                <div class="space-y-4 text-zinc-600 leading-relaxed font-light text-base sm:text-lg">
+                    <p>
+                        <strong class="text-zinc-800 font-medium">Dr. Rajvi Bheda Vora</strong> is an esteemed Dermatologist, Cosmetologist, and Aesthetic Surgeon dedicated to helping patients achieve healthy, radiant skin and restored hair confidence. 
+                    </p>
+                    <p class="text-sm sm:text-base text-zinc-500">
+                        With over 5 years of specialized clinical experience, she seamlessly merges evidence-based medical dermatology with advanced aesthetic techniques. Whether managing complex clinical skin disorders or delivering personalized anti-aging and facial contouring treatments, her patient-first philosophy ensures natural, long-lasting outcomes.
+                    </p>
+                </div>
+
+                <div class="w-full h-[1px] bg-gradient-to-r from-[#D4AF37]/40 via-[#D4AF37]/10 to-transparent"></div>
+
+                <!-- Education & Qualifications Grid -->
+                <div>
+                    <h3 class="text-xs uppercase tracking-[0.25em] text-[#B8860B] font-semibold mb-4">Qualifications & Background</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <div class="flex items-start gap-3 p-3.5 bg-white rounded-lg border border-[#D4AF37]/20 shadow-xs">
+                            <div class="w-9 h-9 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 text-[#B8860B]">
+                                <i class="fa-solid fa-user-doctor text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-zinc-800 text-sm">MBBS</h4>
+                                <p class="text-xs text-zinc-500">Bachelor of Medicine & Surgery</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3.5 bg-white rounded-lg border border-[#D4AF37]/20 shadow-xs">
+                            <div class="w-9 h-9 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 text-[#B8860B]">
+                                <i class="fa-solid fa-graduation-cap text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-zinc-800 text-sm">DDVL</h4>
+                                <p class="text-xs text-zinc-500">Diploma in Dermatology, Venereology & Leprosy</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3.5 bg-white rounded-lg border border-[#D4AF37]/20 shadow-xs">
+                            <div class="w-9 h-9 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 text-[#B8860B]">
+                                <i class="fa-solid fa-award text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-zinc-800 text-sm">Dermatologist of the Year</h4>
+                                <p class="text-xs text-zinc-500">Recognized Alumna Distinction</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3.5 bg-white rounded-lg border border-[#D4AF37]/20 shadow-xs">
+                            <div class="w-9 h-9 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center shrink-0 text-[#B8860B]">
+                                <i class="fa-solid fa-stethoscope text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-zinc-800 text-sm">Aesthetic Surgeon</h4>
+                                <p class="text-xs text-zinc-500">Advanced Dermatosurgery Specialist</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Call To Action -->
+                <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="/contact.html" 
+                       class="px-8 py-3.5 bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white rounded-full font-medium text-sm text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+                        Schedule a Consultation
+                    </a>
+                    <a href="#services" 
+                       class="px-8 py-3.5 border border-[#B8860B]/40 text-zinc-800 hover:text-[#B8860B] hover:border-[#B8860B] rounded-full font-medium text-sm text-center transition-all duration-300">
+                        Explore Treatments
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <!-- services -->
@@ -493,18 +637,18 @@
             img: "/images/nailtreatment.jpg",
             caption: "Medical Podiatry & Ungual Therapy",
             items: [
-                { id: "01", tag: "Therapeutic", title: "Nail Avulsion & Management", img: "https://images.unsplash.com/photo-1604654894610-df490998cd10?auto=format&fit=crop&q=80&w=600", desc: "Clinical procedures safely managing painful ingrown nail edges and underlying matrices under controlled comfort." },
-                { id: "02", tag: "Infection Path", title: "Onycho-Mycosis Anti-fungal Care", img: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600", desc: "Targeted localized protocols tailored to target and cleanly clear stubborn fungal setups buried deep inside the nail bed." },
-                { id: "03", tag: "Repair", title: "Brittle Nail Matrix Correction", img: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=600", desc: "Medical keratin and element micro-varnishes applied systematically to reconstruct fragile, cracking plate structures." }
+                { id: "01", tag: "Therapeutic", title: "Nail Avulsion & Management", img: "/images/nail1.jpg", desc: "Clinical procedures safely managing painful ingrown nail edges and underlying matrices under controlled comfort." },
+                { id: "02", tag: "Infection Path", title: "Onycho-Mycosis Anti-fungal Care", img: "/images/nail2.avif", desc: "Targeted localized protocols tailored to target and cleanly clear stubborn fungal setups buried deep inside the nail bed." },
+                { id: "03", tag: "Repair", title: "Brittle Nail Matrix Correction", img: "/images/nail3.avif", desc: "Medical keratin and element micro-varnishes applied systematically to reconstruct fragile, cracking plate structures." }
             ]
         },
         surgery: {
-            img: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=800",
+            img: "/images/dermatosurgery.jfif",
             caption: "Precision Dermatosurgical Interventions",
             items: [
-                { id: "01", tag: "Ablation", title: "Mole & Wart Removal", img: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=600", desc: "High-frequency radiofrequency protocols cleanly vaporizing unwanted benign surface elements without altering margins." },
-                { id: "02", tag: "Reconstructive", title: "Cyst & Lipoma Excision", img: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600", desc: "Sterile micro-incisional enucleations built to fully resolve deep dermal lumps while respecting subtle surface tension lines." },
-                { id: "03", tag: "Aesthetic Correction", title: "Scar Revision & Ear Lobe Repair", img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600", desc: "Micro-suturing technologies and laser resurfacing designed to visually downplay old wounds and fix split tissue lobes." }
+                { id: "01", tag: "Ablation", title: "Mole & Wart Removal", img: "/images/moleremoval.jpg", desc: "High-frequency radiofrequency protocols cleanly vaporizing unwanted benign surface elements without altering margins." },
+                { id: "02", tag: "Reconstructive", title: "Cyst & Lipoma Excision", img: "/images/cyst.jpg", desc: "Sterile micro-incisional enucleations built to fully resolve deep dermal lumps while respecting subtle surface tension lines." },
+                { id: "03", tag: "Aesthetic Correction", title: "Scar Revision & Ear Lobe Repair", img: "/images/scar.jpg", desc: "Micro-suturing technologies and laser resurfacing designed to visually downplay old wounds and fix split tissue lobes." }
             ]
         }
     };
@@ -546,7 +690,7 @@
 
                     <!-- Card Footer Link -->
                     <div class="px-5 pb-5 pt-0">
-                        <a href="#contact" class="text-[10px] uppercase tracking-widest font-semibold text-zinc-800 hover:text-[#A97C3A] transition-colors inline-flex items-center gap-1.5 group/btn">
+                        <a href="/contact.html" class="text-[10px] uppercase tracking-widest font-semibold text-zinc-800 hover:text-[#A97C3A] transition-colors inline-flex items-center gap-1.5 group/btn">
                             Book Consultation <span class="transform transition-transform group-hover/btn:translate-x-1">→</span>
                         </a>
                     </div>
@@ -570,6 +714,233 @@
     // Initialize with 'skin' configuration immediately on launch
     document.addEventListener('DOMContentLoaded', () => {
         switchTab('skin');
+    });
+</script>
+
+<!-- 5 Secrets to Glowing Skin Section -->
+<section id="glowing" class="relative py-24 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#FFFDF9] border-t border-[#D4AF37]/20 overflow-hidden">
+    <!-- Ambient Glow Backgrounds -->
+    <div class="absolute top-1/2 left-10 -translate-y-1/2 w-80 h-80 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 right-10 -translate-y-1/2 w-80 h-80 bg-[#E8C76A]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="h-[1px] w-8 bg-[#B8860B]/40"></span>
+                <span class="text-xs uppercase tracking-[0.35em] text-[#B8860B] font-semibold block">Dermatologist's Essentials</span>
+                <span class="h-[1px] w-8 bg-[#B8860B]/40"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 tracking-wide font-light">
+                5 Secrets to <span class="text-[#B8860B] italic font-normal">Glowing Skin</span>
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+                Simple, essential habits curated to revitalize your skin barrier and reveal a naturally radiant complexion.
+            </p>
+            <div class="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#B8860B] to-transparent mx-auto mt-6"></div>
+        </div>
+
+        <!-- Slider Container -->
+        <div class="relative px-2 sm:px-8">
+            <div class="swiper glowingSkinSwiper pb-14">
+                <div class="swiper-wrapper">
+
+                    <!-- STEP 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="group h-full bg-white border border-[#D4AF37]/30 p-6 sm:p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.15)] hover:border-[#B8860B] transition-all duration-500 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#B8860B] bg-[#FFF8EC] px-3 py-1.5 rounded-full border border-[#D4AF37]/30">Secret 01</span>
+                                    <span class="font-serif text-3xl font-light text-[#D4AF37]/50 group-hover:text-[#B8860B] transition-colors">01</span>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 bg-zinc-100 border border-[#D4AF37]/10">
+                                    <img src="/images/hydrated.jpg" alt="Drinking Water Hydration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+
+                                <h3 class="font-serif text-xl font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors mb-3">
+                                    Hydrate From Within
+                                </h3>
+                                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+                                    Keep your skin hydrated by drinking plenty of water throughout the day to flush out toxins, maintain skin elasticity, and achieve a naturally plump glow.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-[#D4AF37]/10 flex items-center text-xs font-medium text-[#B8860B]">
+                                <i class="fa-solid fa-droplet mr-2"></i> Daily Hydration Target
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="group h-full bg-white border border-[#D4AF37]/30 p-6 sm:p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.15)] hover:border-[#B8860B] transition-all duration-500 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#B8860B] bg-[#FFF8EC] px-3 py-1.5 rounded-full border border-[#D4AF37]/30">Secret 02</span>
+                                    <span class="font-serif text-3xl font-light text-[#D4AF37]/50 group-hover:text-[#B8860B] transition-colors">02</span>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 bg-zinc-100 border border-[#D4AF37]/10">
+                                    <img src="/images/sunscreen.jpg" alt="Sun Protection Sunshine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+
+                                <h3 class="font-serif text-xl font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors mb-3">
+                                    Sun Protection
+                                </h3>
+                                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+                                    Protect your skin from the sun by wearing sunscreen and avoiding excessive exposure to prevent premature aging, dark spots, and UV damage.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-[#D4AF37]/10 flex items-center text-xs font-medium text-[#B8860B]">
+                                <i class="fa-solid fa-sun mr-2"></i> Daily Essential Shield
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="group h-full bg-white border border-[#D4AF37]/30 p-6 sm:p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.15)] hover:border-[#B8860B] transition-all duration-500 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#B8860B] bg-[#FFF8EC] px-3 py-1.5 rounded-full border border-[#D4AF37]/30">Secret 03</span>
+                                    <span class="font-serif text-3xl font-light text-[#D4AF37]/50 group-hover:text-[#B8860B] transition-colors">03</span>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 bg-zinc-100 border border-[#D4AF37]/10">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800" alt="Relaxation and Stress Relief" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+
+                                <h3 class="font-serif text-xl font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors mb-3">
+                                    Manage Stress
+                                </h3>
+                                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+                                    Practice stress-relieving activities to reduce stress and improve skin health, balancing cortisol levels to keep breakouts and inflammation at bay.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-[#D4AF37]/10 flex items-center text-xs font-medium text-[#B8860B]">
+                                <i class="fa-solid fa-spa mr-2"></i> Mind & Skin Wellness
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="group h-full bg-white border border-[#D4AF37]/30 p-6 sm:p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.15)] hover:border-[#B8860B] transition-all duration-500 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#B8860B] bg-[#FFF8EC] px-3 py-1.5 rounded-full border border-[#D4AF37]/30">Secret 04</span>
+                                    <span class="font-serif text-3xl font-light text-[#D4AF37]/50 group-hover:text-[#B8860B] transition-colors">04</span>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 bg-zinc-100 border border-[#D4AF37]/10">
+                                    <img src="/images/exfloiation.jpg" alt="Exfoliating Scrub Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+
+                                <h3 class="font-serif text-xl font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors mb-3">
+                                    Regular Exfoliation
+                                </h3>
+                                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+                                    Exfoliate regularly to remove dead skin cells and reveal a brighter complexion, unclogging pores and encouraging faster cellular renewal.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-[#D4AF37]/10 flex items-center text-xs font-medium text-[#B8860B]">
+                                <i class="fa-solid fa-sparkles mr-2"></i> Weekly Brightening
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="group h-full bg-white border border-[#D4AF37]/30 p-6 sm:p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_35px_rgba(184,134,11,0.15)] hover:border-[#B8860B] transition-all duration-500 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#B8860B] bg-[#FFF8EC] px-3 py-1.5 rounded-full border border-[#D4AF37]/30">Secret 05</span>
+                                    <span class="font-serif text-3xl font-light text-[#D4AF37]/50 group-hover:text-[#B8860B] transition-colors">05</span>
+                                </div>
+                                
+                                <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-6 bg-zinc-100 border border-[#D4AF37]/10">
+                                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800" alt="Gentle Face Washing Skincare" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+
+                                <h3 class="font-serif text-xl font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors mb-3">
+                                    Gentle Cleansing
+                                </h3>
+                                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed font-light">
+                                    Use a gentle cleanser to remove dirt and oil from your skin without stripping away essential natural lipids, keeping your moisture barrier intact.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-[#D4AF37]/10 flex items-center text-xs font-medium text-[#B8860B]">
+                                <i class="fa-solid fa-pump-soap mr-2"></i> Daily Morning & Night
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Custom Pagination Dots -->
+                <div class="swiper-pagination !bottom-0"></div>
+            </div>
+
+            <!-- Custom Navigation Arrows -->
+            <button class="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-6 z-20 w-11 h-11 rounded-full bg-white border border-[#D4AF37]/40 text-[#B8860B] flex items-center justify-center shadow-md hover:bg-[#FFF8EC] hover:scale-105 transition duration-300">
+                <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+            <button class="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-6 z-20 w-11 h-11 rounded-full bg-white border border-[#D4AF37]/40 text-[#B8860B] flex items-center justify-center shadow-md hover:bg-[#FFF8EC] hover:scale-105 transition duration-300">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Custom Styling for Swiper Pagination -->
+<style>
+    .glowingSkinSwiper .swiper-pagination-bullet {
+        background: #D4AF37;
+        opacity: 0.3;
+        width: 10px;
+        height: 10px;
+        transition: all 0.3s ease;
+    }
+    .glowingSkinSwiper .swiper-pagination-bullet-active {
+        background: #B8860B;
+        opacity: 1;
+        width: 28px;
+        border-radius: 9999px;
+    }
+</style>
+
+<!-- Swiper Initialization Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const glowingSwiper = new Swiper(".glowingSkinSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next-custom",
+                prevEl: ".swiper-button-prev-custom",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
     });
 </script>
 
@@ -728,6 +1099,179 @@
     </div>
 </section>
 
+<!-- FAQ Section -->
+<section id="faq" class="relative py-24 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#FFFDF9] border-t border-[#D4AF37]/20 overflow-hidden">
+    <!-- Background Glow Effects -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="900">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="h-[1px] w-8 bg-[#B8860B]/40"></span>
+                <span class="text-xs uppercase tracking-[0.3em] text-[#B8860B] font-semibold block">Got Questions?</span>
+                <span class="h-[1px] w-8 bg-[#B8860B]/40"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 font-light leading-tight">
+                Frequently Asked <span class="text-[#B8860B] italic font-normal">Questions</span>
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-zinc-600 font-light leading-relaxed">
+                Clear, transparent insights into treatments, consultation procedures, and patient care.
+            </p>
+        </div>
+
+        <!-- FAQ Accordion Container -->
+        <div class="space-y-4" id="faq-accordion" data-aos="fade-up" data-aos-delay="150" data-aos-duration="900">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item group bg-white border border-[#D4AF37]/25 rounded-xl transition-all duration-300 shadow-sm hover:border-[#D4AF37]/60">
+                <button 
+                    type="button" 
+                    class="faq-toggle w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    aria-expanded="false"
+                    onclick="toggleFaq(this)">
+                    <span class="font-serif text-base sm:text-lg font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors pr-4">
+                        What should I expect during my first consultation?
+                    </span>
+                    <span class="faq-icon-wrapper w-8 h-8 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] shrink-0 transition-transform duration-300">
+                        <i class="fa-solid fa-plus text-xs faq-icon"></i>
+                    </span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                    Your initial consultation includes a comprehensive analysis of your skin or hair condition, an in-depth review of your medical history, and a customized treatment roadmap tailored specifically to your goals and lifestyle.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item group bg-white border border-[#D4AF37]/25 rounded-xl transition-all duration-300 shadow-sm hover:border-[#D4AF37]/60">
+                <button 
+                    type="button" 
+                    class="faq-toggle w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    aria-expanded="false"
+                    onclick="toggleFaq(this)">
+                    <span class="font-serif text-base sm:text-lg font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors pr-4">
+                        Are aesthetic procedures like Botox, Fillers, and Lasers safe?
+                    </span>
+                    <span class="faq-icon-wrapper w-8 h-8 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] shrink-0 transition-transform duration-300">
+                        <i class="fa-solid fa-plus text-xs faq-icon"></i>
+                    </span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                    Yes, absolutely. All procedures are administered by Dr. Rajvi Bheda Vora using US-FDA approved products and gold-standard medical technology under strict clinical safety guidelines to deliver subtle, natural-looking results.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item group bg-white border border-[#D4AF37]/25 rounded-xl transition-all duration-300 shadow-sm hover:border-[#D4AF37]/60">
+                <button 
+                    type="button" 
+                    class="faq-toggle w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    aria-expanded="false"
+                    onclick="toggleFaq(this)">
+                    <span class="font-serif text-base sm:text-lg font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors pr-4">
+                        How many sessions will I need for Hair Restoration (PRP / GFC)?
+                    </span>
+                    <span class="faq-icon-wrapper w-8 h-8 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] shrink-0 transition-transform duration-300">
+                        <i class="fa-solid fa-plus text-xs faq-icon"></i>
+                    </span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                    Most hair growth therapies require 4 to 6 sessions spaced 3 to 4 weeks apart to achieve optimal hair density and scalp rejuvenation. Maintenance sessions may be advised depending on the underlying cause of hair fall.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item group bg-white border border-[#D4AF37]/25 rounded-xl transition-all duration-300 shadow-sm hover:border-[#D4AF37]/60">
+                <button 
+                    type="button" 
+                    class="faq-toggle w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    aria-expanded="false"
+                    onclick="toggleFaq(this)">
+                    <span class="font-serif text-base sm:text-lg font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors pr-4">
+                        Is there downtime after chemical peels or laser treatments?
+                    </span>
+                    <span class="faq-icon-wrapper w-8 h-8 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] shrink-0 transition-transform duration-300">
+                        <i class="fa-solid fa-plus text-xs faq-icon"></i>
+                    </span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                    Most light chemical peels and laser toning procedures require zero downtime, allowing you to return to work immediately. Deeper resurfacing treatments may cause mild flaking or redness for 2 to 5 days, for which full post-care guidance is provided.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item group bg-white border border-[#D4AF37]/25 rounded-xl transition-all duration-300 shadow-sm hover:border-[#D4AF37]/60">
+                <button 
+                    type="button" 
+                    class="faq-toggle w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    aria-expanded="false"
+                    onclick="toggleFaq(this)">
+                    <span class="font-serif text-base sm:text-lg font-medium text-zinc-900 group-hover:text-[#B8860B] transition-colors pr-4">
+                        How can I book an appointment with Dr. Rajvi?
+                    </span>
+                    <span class="faq-icon-wrapper w-8 h-8 rounded-full bg-[#FFF8EC] border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] shrink-0 transition-transform duration-300">
+                        <i class="fa-solid fa-plus text-xs faq-icon"></i>
+                    </span>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 text-zinc-600 text-sm sm:text-base font-light leading-relaxed border-t border-[#D4AF37]/10 pt-4">
+                    You can easily schedule a consultation by clicking the <a href="/contact.html" class="text-[#B8860B] font-medium underline hover:text-[#966d09]">Book Consultation</a> button, reaching out via direct message on Instagram (<a href="https://www.instagram.com/dermrajvi/?hl=en" target="_blank" class="text-[#B8860B] font-medium underline">@dermrajvi</a>), or contacting our clinic directly.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Help Banner CTA -->
+        <div class="mt-14 p-8 rounded-2xl bg-gradient-to-r from-[#2D2A26] to-[#1A1816] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-[#D4AF37]/30" data-aos="fade-up" data-aos-delay="250">
+            <div>
+                <h4 class="font-serif text-xl font-light text-[#D4AF37]">Have a specific query?</h4>
+                <p class="text-xs sm:text-sm text-zinc-400 font-light mt-1">Our clinical team is happy to assist you with any questions.</p>
+            </div>
+            <a href="/contact.html" class="shrink-0 px-7 py-3 bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white rounded-full font-medium text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                Ask a Question
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ Accordion Interactive Script -->
+<script>
+    function toggleFaq(button) {
+        const item = button.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        // Close all other active FAQ items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                const otherBtn = otherItem.querySelector('.faq-toggle');
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherIcon = otherItem.querySelector('.faq-icon');
+                
+                otherBtn.setAttribute('aria-expanded', 'false');
+                otherAnswer.classList.add('hidden');
+                otherIcon.classList.replace('fa-minus', 'fa-plus');
+                otherItem.classList.remove('border-[#B8860B]', 'shadow-md');
+            }
+        });
+
+        // Toggle current FAQ item
+        if (isExpanded) {
+            button.setAttribute('aria-expanded', 'false');
+            answer.classList.add('hidden');
+            icon.classList.replace('fa-minus', 'fa-plus');
+            item.classList.remove('border-[#B8860B]', 'shadow-md');
+        } else {
+            button.setAttribute('aria-expanded', 'true');
+            answer.classList.remove('hidden');
+            icon.classList.replace('fa-plus', 'fa-minus');
+            item.classList.add('border-[#B8860B]', 'shadow-md');
+        }
+    }
+</script>
+
     <!-- Action Call & Contact Integration Footer -->
     <section id="contact" class="bg-gold-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto text-center space-y-8">
@@ -826,7 +1370,7 @@
                         <a href="#services" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Treatments</a>
                     </li>
                     <li>
-                        <a href="#hair" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Hair Restoration</a>
+                        <a href="#glowing" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Skin Secrets</a>
                     </li>
                     <li>
                         <a href="#locations" class="hover:text-[#D4AF37] transition-colors inline-block py-0.5">Clinic Locations</a>
@@ -891,6 +1435,7 @@
 
     </div>
 </footer>
+
 
 </body>
 </html>
