@@ -109,240 +109,143 @@
 </head>
 <body class="bg-gold-50 text-zinc-800 font-sans antialiased selection:bg-gold-100 selection:text-gold-900">
 
-<!-- Premium Header -->
+<!-- ====== HEADER (Navbar only) ====== -->
 <header class="sticky top-0 z-50 bg-[#FFFDF9]/95 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-sm">
 
-    <div class="max-w-[1450px] mx-auto px-6 lg:px-10">
+  <div class="max-w-[1450px] mx-auto px-6 lg:px-10">
 
-        <div class="flex items-center justify-between h-20 lg:h-24">
+    <div class="flex items-center justify-between h-20 lg:h-24">
 
-            <!-- Logo -->
-            <a href="/" class="flex items-center flex-shrink-0 z-50">
+      <!-- LOGO -->
+      <a href="/index.html" class="flex items-center flex-shrink-0 z-50 py-1">
+        <img
+          src="https://ik.imagekit.io/iuiy6mihw/rajvibhedalogo.png"
+          alt="Dr. Rajvi Bheda Vora"
+          class="h-20 sm:h-22 lg:h-24 w-auto max-w-[230px] xs:max-w-[280px] sm:max-w-[340px] lg:max-w-none object-contain object-left scale-110 sm:scale-100 mix-blend-multiply drop-shadow-sm transition duration-300"
+        >
+      </a>
 
-                <img
-                    src="https://ik.imagekit.io/iuiy6mihw/RajviBhedalogo.jpeg"
-                    alt="Dr. Rajvi Bheda Vora"
-                    class="h-16 lg:h-24 w-auto object-contain transition duration-500"
-                >
-
+      <!-- DESKTOP NAV -->
+      <nav class="hidden lg:flex items-center">
+        <ul class="flex items-center gap-10">
+          <li><a href="/index.html#home" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">Home</a></li>
+          <li><a href="/index.html#about" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">About</a></li>
+          <li><a href="/index.html#services" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">Treatments</a></li>
+          <li><a href="/index.html#glowing" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">Skin Secrets</a></li>
+          <li><a href="/index.html#locations" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">Clinics</a></li>
+          <li><a href="/beforeafter.html" class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">Patient Transformations</a></li>
+          <li>
+            <a href="https://www.instagram.com/dermrajvi/?hl=en" target="_blank" class="flex items-center gap-2 text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
+              <i class="fa-brands fa-instagram text-lg"></i> Instagram
             </a>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center">
-
-                <ul class="flex items-center gap-10">
-
-                     <li>
-                        <a href="#home"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#about"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#services"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Treatments
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#glowing"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Skin Secrets
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#locations"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Clinics
-                        </a>
-                    </li>
-
-                       <li>
-                        <a href="/beforeafter.html"
-                            class="text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-                            Patient Transformations
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.instagram.com/dermrajvi/?hl=en"
-                            target="_blank"
-                            class="flex items-center gap-2 text-[15px] font-medium tracking-wide text-zinc-700 hover:text-[#B8860B] transition">
-
-                            <i class="fa-brands fa-instagram text-lg"></i>
-
-                            Instagram
-
-                        </a>
-                    </li>
-
-                </ul>
-
-                <!-- Divider -->
-                <div class="mx-8 h-8 w-px bg-[#D4AF37]/30"></div>
-
-                <!-- CTA -->
-                <a href="/contact.html"
-                    class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-8 py-3.5 text-[14px] font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
-
-                    Book Consultation
-
-                </a>
-
-            </nav>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button
-                id="mobile-menu-btn"
-                aria-label="Toggle Navigation Menu"
-                class="lg:hidden z-50 w-11 h-11 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] hover:bg-[#FFF8E6] transition active:scale-95">
-
-                <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- Mobile Navigation Drawer Overlay -->
-    <div 
-        id="mobile-menu-overlay"
-        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div 
-        id="mobile-menu"
-        class="fixed top-0 right-0 w-[80%] max-w-sm h-screen bg-[#FFFDF9] z-40 pt-28 px-8 pb-10 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden border-l border-[#D4AF37]/20 overflow-y-auto">
-
-        <ul class="flex flex-col gap-6">
-
-            <li>
-                <a href="#home" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="#about" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    About
-                </a>
-            </li>
-
-            <li>
-                <a href="#services" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Treatments
-                </a>
-            </li>
-
-            <li>
-                <a href="#glowing" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Skin Secrets
-                </a>
-            </li>
-
-            <li>
-                <a href="#locations" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Clinics
-                </a>
-            </li>
-
-             <li>
-                <a href="/beforeafter.html" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-                    Patient Transformations
-                </a>
-            </li>
-
-            <li class="pt-2 border-t border-[#D4AF37]/20">
-                <a href="https://www.instagram.com/dermrajvi/?hl=en"
-                    target="_blank"
-                    class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
-
-                    <i class="fa-brands fa-instagram text-xl text-[#B8860B]"></i>
-
-                    Instagram
-
-                </a>
-            </li>
-
+          </li>
         </ul>
 
-        <!-- Mobile CTA Button -->
-        <div class="pt-8">
-            <a href="/contact.html"
-                class="mobile-nav-link flex items-center justify-center w-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] py-4 text-[15px] font-semibold tracking-wide text-white shadow-lg transition hover:shadow-xl active:scale-95">
+        <!-- Divider -->
+        <div class="mx-8 h-8 w-px bg-[#D4AF37]/30"></div>
 
-                Book Consultation
+        <!-- CTA -->
+        <a href="/contact.html" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-8 py-3.5 text-[14px] font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+          Book Consultation
+        </a>
+      </nav>
 
-            </a>
-        </div>
+      <!-- MOBILE TOGGLE BUTTON -->
+      <button
+        id="mobile-menu-btn"
+        aria-label="Toggle Navigation Menu"
+        class="lg:hidden z-50 w-11 h-11 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#B8860B] hover:bg-[#FFF8E6] transition active:scale-95"
+      >
+        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
 
     </div>
+  </div>
+
+  <!-- OVERLAY (no black transparency - using soft cream) -->
+  <div 
+    id="mobile-menu-overlay"
+    class="fixed inset-0 bg-[#FFFDF9]/80 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
+  ></div>
+
+  <!-- MOBILE DRAWER -->
+  <div 
+    id="mobile-menu"
+    class="fixed top-0 right-0 w-[80%] max-w-sm h-screen bg-[#FFFDF9] z-40 pt-28 px-8 pb-10 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden border-l border-[#D4AF37]/20 overflow-y-auto"
+  >
+    <ul class="flex flex-col gap-6">
+      <li><a href="/index.html#home" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">Home</a></li>
+      <li><a href="/index.html#about" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">About</a></li>
+      <li><a href="/index.html#services" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">Treatments</a></li>
+      <li><a href="/index.html#glowing" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">Skin Secrets</a></li>
+      <li><a href="/index.html#locations" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">Clinics</a></li>
+      <li><a href="/beforeafter.html" class="mobile-nav-link block text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">Patient Transformations</a></li>
+      <li class="pt-2 border-t border-[#D4AF37]/20">
+        <a href="https://www.instagram.com/dermrajvi/?hl=en" target="_blank" class="mobile-nav-link flex items-center gap-3 text-lg font-medium text-zinc-800 hover:text-[#B8860B] transition">
+          <i class="fa-brands fa-instagram text-xl text-[#B8860B]"></i> Instagram
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile CTA -->
+    <div class="pt-8">
+      <a href="/contact.html" class="mobile-nav-link flex items-center justify-center w-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] py-4 text-[15px] font-semibold tracking-wide text-white shadow-lg transition hover:shadow-xl active:scale-95">
+        Book Consultation
+      </a>
+    </div>
+  </div>
 
 </header>
 
-<!-- Mobile Menu Toggle Script -->
+<!-- ====== JAVASCRIPT (Toggle functionality) ====== -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const overlay = document.getElementById('mobile-menu-overlay');
-        const menuIcon = document.getElementById('menu-icon');
-        const navLinks = document.querySelectorAll('.mobile-nav-link');
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
 
-        function isMenuOpen() {
-            return !mobileMenu.classList.contains('translate-x-full');
-        }
+    function isMenuOpen() {
+      return !mobileMenu.classList.contains('translate-x-full');
+    }
 
-        function closeMenu() {
-            if (!isMenuOpen()) return;
-            mobileMenu.classList.add('translate-x-full');
-            overlay.classList.add('opacity-0', 'pointer-events-none');
-            overlay.classList.remove('opacity-100', 'pointer-events-auto');
-            menuIcon.classList.replace('fa-xmark', 'fa-bars');
-        }
+    function closeMenu() {
+      if (!isMenuOpen()) return;
+      mobileMenu.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      menuIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
 
-        function openMenu() {
-            mobileMenu.classList.remove('translate-x-full');
-            overlay.classList.remove('opacity-0', 'pointer-events-none');
-            overlay.classList.add('opacity-100', 'pointer-events-auto');
-            menuIcon.classList.replace('fa-bars', 'fa-xmark');
-        }
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+      menuIcon.classList.replace('fa-bars', 'fa-xmark');
+    }
 
-        function toggleMenu() {
-            if (isMenuOpen()) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        }
+    function toggleMenu() {
+      if (isMenuOpen()) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
 
-        menuBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
+    menuBtn.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
 
-        // Close menu on link click
-        navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Auto-close menu when scrolling the page
-        window.addEventListener('scroll', () => {
-            if (isMenuOpen()) {
-                closeMenu();
-            }
-        }, { passive: true });
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
+
+    window.addEventListener('scroll', () => {
+      if (isMenuOpen()) {
+        closeMenu();
+      }
+    }, { passive: true });
+  });
 </script>
 
     <!-- Hero Section -->
@@ -656,26 +559,26 @@
                     Combining evidence-based medical science with aesthetic artistry to deliver personalized skin, hair, and dermatosurgical care.
                 </p>
 
-                <!-- Social Links -->
-                <div class="flex items-center gap-3 pt-2">
-                    <a href="https://www.instagram.com/dermrajvi/?hl=en" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       aria-label="Instagram"
-                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
-                        <i class="fa-brands fa-instagram text-base"></i>
-                    </a>
-                    <a href="mailto:rajvi.db@gmail.com" 
-                       aria-label="Email"
-                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
-                        <i class="fa-solid fa-envelope text-sm"></i>
-                    </a>
-                    <a href="tel:+919137789949" 
-                       aria-label="Phone"
-                       class="w-10 h-10 rounded-full border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#B8891F] hover:text-white hover:border-[#B8891F] transition-all duration-300">
-                        <i class="fa-solid fa-phone text-sm"></i>
-                    </a>
-                </div>
+               <!-- Social Links -->
+<div class="flex items-center gap-3.5 pt-3">
+    <a href="https://www.instagram.com/dermrajvi/?hl=en" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Instagram"
+       class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+        <i class="fa-brands fa-instagram text-lg"></i>
+    </a>
+    <a href="mailto:rajvi.db@gmail.com" 
+       aria-label="Email"
+       class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+        <i class="fa-solid fa-envelope text-base"></i>
+    </a>
+    <a href="tel:+919137789949" 
+       aria-label="Phone"
+       class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+        <i class="fa-solid fa-phone text-base"></i>
+    </a>
+</div>
             </div>
 
             <!-- Column 2: Quick Links (2 Cols) -->
@@ -760,5 +663,18 @@
 
     </div>
 </footer>
+
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919137789949"
+   target="_blank"
+   aria-label="Chat on WhatsApp"
+   class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 hover:shadow-2xl transition-all duration-300">
+
+    <i class="fa-brands fa-whatsapp text-4xl"></i>
+
+</a>
+
+
 </body>
 </html>
