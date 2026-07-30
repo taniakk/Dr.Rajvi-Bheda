@@ -380,7 +380,7 @@
                                 <i class="fa-solid fa-user-doctor text-sm"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-zinc-800 text-sm">MBBS</h4>
+                                <h4 class="font-semibold text-zinc-800 text-sm">MBBS (KEM Hospital)</h4>
                                 <p class="text-xs text-zinc-500">Bachelor of Medicine & Surgery</p>
                             </div>
                         </div>
@@ -390,7 +390,7 @@
                                 <i class="fa-solid fa-graduation-cap text-sm"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-zinc-800 text-sm">MD</h4>
+                                <h4 class="font-semibold text-zinc-800 text-sm">MD (KEM Hospital)</h4>
                                 <p class="text-xs text-zinc-500">Doctor of Medicine (Dermatology, Venereology & Leprosy)</p>
                             </div>
                         </div>
@@ -538,7 +538,8 @@
                 { id: "01", tag: "Injectables", title: "Botox & Fillers", img: "https://ik.imagekit.io/iuiy6mihw/botox.jpg", desc: "Target wrinkles and restore natural facial contours cleanly with premium FDA-approved relaxers and dynamic volume augmentations." },
                 { id: "02", tag: "Advanced Glow", title: "Vampire & Hollywood Facials", img: "https://ik.imagekit.io/iuiy6mihw/hollywoodfacial.jpg", desc: "Utilize medical microneedling paired with carbon laser toning to trigger complete deep-dermal structural remodeling." },
                 { id: "03", tag: "Exfoliation", title: "Chemical Peels & Microdermabrasion", img: "https://ik.imagekit.io/iuiy6mihw/chemicalpeel.jpg", desc: "Medical grade fruit acid treatments structured to systematically shed hyperpigmented layers and reveal smoother cells." },
-                { id: "04", tag: "Glass Skin", title: "Hydrafacial & Korean Glow", img: "https://ik.imagekit.io/iuiy6mihw/facial.avif", desc: "Multi-step medical hydro-infusions formulated to maximize hydration levels, extract impurities, and lock in long-term luminescence." }
+                { id: "04", tag: "Glass Skin", title: "Hydrafacial & Korean Glow", img: "https://ik.imagekit.io/iuiy6mihw/facial.avif", desc: "Multi-step medical hydro-infusions formulated to maximize hydration levels, extract impurities, and lock in long-term luminescence." },
+                { id: "05", tag: "Laser Care", title: "Laser Hair Reduction", img: "https://ik.imagekit.io/iuiy6mihw/laserhairreduction.jpg", desc: "Precision medical-grade laser protocols targeting hair follicles to deliver long-lasting reduction and smooth skin safely." }
             ]
         },
         hair: {
@@ -1125,6 +1126,265 @@
     </div>
 </section>
 
+<!-- Patient Reviews & Testimonials Section -->
+<section id="reviews" class="relative py-28 bg-gradient-to-b from-white via-[#FAF8F5] to-white border-b border-[#A97C3A]/20 overflow-hidden">
+    
+    <!-- Ambient Radial Glow Effects -->
+    <div class="absolute top-1/3 left-10 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/3 right-10 w-96 h-96 bg-[#E8C76A]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up" data-aos-duration="1000">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="h-[1px] w-8 bg-[#A97C3A]/40"></span>
+                <span class="text-xs uppercase tracking-[0.35em] text-[#A97C3A] font-semibold block">Patient Experience</span>
+                <span class="h-[1px] w-8 bg-[#A97C3A]/40"></span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-zinc-900 tracking-wide font-light">
+                Words of Gratitude & Trust
+            </h2>
+            <div class="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#A97C3A] to-transparent mx-auto mt-6"></div>
+        </div>
+
+        <!-- Review Category Navigation Tabs -->
+        <div data-aos="fade-up" data-aos-delay="150" data-aos-duration="900" 
+             class="grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-white/80 backdrop-blur-md rounded-none max-w-4xl mx-auto mb-16 border border-[#A97C3A]/20 shadow-[0_10px_30px_-10px_rgba(169,124,58,0.08)]">
+            
+            <button onclick="switchReviewTab('skin')" id="review-tab-skin" 
+                    class="review-tab-btn flex flex-col items-center justify-center py-4 px-3 bg-gradient-to-b from-[#2D2A26] to-[#1A1816] text-[#D4AF37] border border-[#A97C3A]/40 shadow-md transition-all duration-300 group focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Skin & Laser</span>
+            </button>
+            
+            <button onclick="switchReviewTab('hair')" id="review-tab-hair" 
+                    class="review-tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Hair Care</span>
+            </button>
+            
+            <button onclick="switchReviewTab('nails')" id="review-tab-nails" 
+                    class="review-tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Nail Care</span>
+            </button>
+            
+            <button onclick="switchReviewTab('surgery')" id="review-tab-surgery" 
+                    class="review-tab-btn flex flex-col items-center justify-center py-4 px-3 text-zinc-600 hover:text-[#A97C3A] hover:bg-[#FAF8F5] transition-all duration-300 focus:outline-none">
+                <span class="font-serif text-xs sm:text-sm tracking-[0.15em] font-medium uppercase">Dermatosurgery</span>
+            </button>
+        </div>
+
+        <!-- Interactive Layout Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left Side: Interactive Dynamic Review Cards -->
+            <div id="reviews-content" 
+                 data-aos="fade-right" 
+                 data-aos-delay="250" 
+                 data-aos-duration="900" 
+                 class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 transition-all duration-500">
+                <!-- Reviews injected dynamically via JavaScript -->
+            </div>
+
+            <!-- Right Side: Sticky Visual Rating & Summary Container -->
+            <div class="lg:col-span-5 lg:sticky lg:top-32" data-aos="fade-left" data-aos-delay="350" data-aos-duration="900">
+                <div class="group relative overflow-hidden bg-white border border-[#A97C3A]/30 p-8 shadow-[0_20px_50px_-15px_rgba(169,124,58,0.12)] rounded-none transition-all duration-500">
+                    
+                    <!-- Decorative Golden Frame Inset -->
+                    <div class="absolute inset-5 border border-[#A97C3A]/20 pointer-events-none z-20 group-hover:border-[#A97C3A]/60 transition-colors duration-500"></div>
+
+                    <div class="relative z-10 flex flex-col items-center text-center space-y-6 py-6">
+                        
+                        <span class="text-[10px] uppercase font-bold tracking-[0.3em] text-[#A97C3A] block">Clinical Excellence</span>
+                        
+                        <!-- Rating Display -->
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-6xl font-light text-zinc-900 tracking-tight">5.0<span class="text-2xl text-[#A97C3A]">/5</span></h3>
+                            <div class="flex items-center justify-center gap-1 text-[#D4AF37] text-lg">
+                                ★★★★★
+                            </div>
+                            <p class="text-xs text-zinc-500 font-light tracking-wide">Verified Patient Ratings & Experience</p>
+                        </div>
+
+                        <div class="w-12 h-[1px] bg-[#A97C3A]/30"></div>
+
+                        <!-- Highlights List -->
+                        <div class="w-full text-left space-y-3 pt-2">
+                            <div class="flex items-center gap-3 text-xs text-zinc-600 font-light">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#A97C3A]"></span>
+                                <span>Detailed Consultation & Root Cause Analysis</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-zinc-600 font-light">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#A97C3A]"></span>
+                                <span>Transparent & Ethical Medical Guidance</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-zinc-600 font-light">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#A97C3A]"></span>
+                                <span>Advanced FDA-Approved Clinical Protocols</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Callout -->
+                        <div class="w-full pt-4">
+                            <a href="/contact.html" class="block w-full text-center py-3 bg-gradient-to-b from-[#2D2A26] to-[#1A1816] text-[#D4AF37] border border-[#A97C3A]/40 font-serif text-xs uppercase tracking-[0.2em] font-medium transition-all hover:border-[#A97C3A]">
+                                Book Your Consultation
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</section>
+
+<!-- Review Interactive Script -->
+<script>
+    const reviewsData = {
+        skin: [
+            {
+                id: "01",
+                initials: "RB",
+                name: "Ridhi B.",
+                treatment: "Acne & Skin Care",
+                rating: "★★★★★",
+                comment: "Dr. Rajvi Bheda Vora took the time to understand my skin condition patiently and explained the treatment process thoroughly. Highly professional approach and genuine care!"
+            },
+            {
+                id: "02",
+                name: "Aniket M.",
+                initials: "AM",
+                treatment: "Laser Hair Reduction",
+                rating: "★★★★★",
+                comment: "Great experience with the laser sessions. Extremely safe, hygienic setup and Dr. Rajvi ensures maximum comfort throughout the treatment."
+            },
+            {
+                id: "03",
+                initials: "SK",
+                name: "Shalini K.",
+                treatment: "Melasma & Lactic Peel",
+                rating: "★★★★★",
+                comment: "Dr. Rajvi doesn't push unnecessary procedures. Her ethical guidance and systematic peel treatment helped lighten my stubborn pigmentation immensely."
+            }
+        ],
+        hair: [
+            {
+                id: "01",
+                initials: "VP",
+                name: "Varun P.",
+                treatment: "Hair Fall & PRP Therapy",
+                rating: "★★★★★",
+                comment: "I visited Dr. Rajvi for severe hair loss. Her diagnosis was spot on and the PRP therapy sessions showed visible improvement in hair density in a few months."
+            },
+            {
+                id: "02",
+                initials: "PS",
+                name: "Pooja S.",
+                treatment: "Dandruff & Scalp Care",
+                rating: "★★★★★",
+                comment: "Very friendly and approachable doctor. She explained the root cause of my chronic dandruff and prescribed a simple, effective routine that actually worked."
+            }
+        ],
+        nails: [
+            {
+                id: "01",
+                initials: "NK",
+                name: "Neha K.",
+                treatment: "Nail Infection Treatment",
+                rating: "★★★★★",
+                comment: "I was struggling with a painful nail bed infection for weeks. Dr. Rajvi treated it very gently and prescribed effective medications. Relief was almost immediate."
+            },
+            {
+                id: "02",
+                initials: "AS",
+                name: "Amit S.",
+                treatment: "Ungual Care",
+                rating: "★★★★★",
+                comment: "Very clean environment and expert medical podiatry care. She explained how to care for brittle nails properly to avoid future recurrences."
+            }
+        ],
+        surgery: [
+            {
+                id: "01",
+                initials: "DG",
+                name: "Deepak G.",
+                treatment: "Moles & Wart Removal",
+                rating: "★★★★★",
+                comment: "Had facial mole removal done by Dr. Rajvi Bheda Vora. The procedure was smooth, painless, and healed neatly without leaving any noticeable mark."
+            },
+            {
+                id: "02",
+                initials: "MJ",
+                name: "Megha J.",
+                treatment: "Skin Tag Ablation",
+                rating: "★★★★★",
+                comment: "Extremely skilled dermatologist. The minor surgical removal was handled so delicately and with complete sterile care. Truly grateful!"
+            }
+        ]
+    };
+
+    function switchReviewTab(category) {
+        // 1. Reset all review tab styles
+        document.querySelectorAll('.review-tab-btn').forEach(btn => {
+            btn.className = "review-tab-btn flex flex-col items-center justify-center py-4 px-2 text-zinc-500 hover:text-zinc-800 transition-all focus:outline-none";
+        });
+
+        // 2. Style active review tab
+        const activeTab = document.getElementById(`review-tab-${category}`);
+        activeTab.className = "review-tab-btn flex flex-col items-center justify-center py-4 px-2 bg-gradient-to-b from-[#2D2A26] to-[#1A1816] text-[#D4AF37] border border-[#A97C3A]/40 shadow-md transition-all group focus:outline-none";
+
+        // 3. Render Review Cards
+        const contentContainer = document.getElementById('reviews-content');
+        contentContainer.style.opacity = 0;
+        
+        setTimeout(() => {
+            contentContainer.innerHTML = reviewsData[category].map(item => `
+                <div class="bg-white border border-zinc-100 overflow-hidden flex flex-col justify-between p-6 transition-all duration-300 hover:border-[#A97C3A]/30 hover:shadow-xl hover:shadow-[#A97C3A]/5 group">
+                    <div>
+                        <!-- Card Header with Name Badge & Treatment Tag -->
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <!-- Monogram Initial Badge instead of Image -->
+                                <div class="w-10 h-10 rounded-full bg-[#FAF8F5] border border-[#A97C3A]/30 flex items-center justify-center text-xs font-serif font-bold text-[#A97C3A] tracking-wider">
+                                    ${item.initials}
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-sm font-medium text-zinc-800 tracking-wide">${item.name}</h4>
+                                    <span class="text-[9px] tracking-[0.15em] uppercase text-[#A97C3A] font-semibold block">${item.treatment}</span>
+                                </div>
+                            </div>
+                            <span class="text-zinc-300 font-serif text-lg">${item.id}</span>
+                        </div>
+
+                        <!-- Rating Stars -->
+                        <div class="text-[#D4AF37] text-xs mb-3">
+                            ${item.rating}
+                        </div>
+
+                        <!-- Comment Text -->
+                        <p class="text-xs text-zinc-500 leading-relaxed font-light italic mb-4">
+                            "${item.comment}"
+                        </p>
+                    </div>
+
+                    <!-- Verified Badge Footer -->
+                    <div class="pt-3 border-t border-zinc-100 flex items-center justify-between">
+                        <span class="text-[9px] uppercase tracking-widest text-zinc-400 font-medium">Verified Patient</span>
+                        <span class="text-[#A97C3A] text-xs font-bold">✓</span>
+                    </div>
+                </div>
+            `).join('');
+            contentContainer.style.opacity = 1;
+        }, 150);
+    }
+
+    // Initialize with 'skin' reviews on launch
+    document.addEventListener('DOMContentLoaded', () => {
+        switchReviewTab('skin');
+    });
+</script>
+
 <!-- FAQ Section -->
 <section id="faq" class="relative py-24 bg-gradient-to-b from-[#FFFDF9] via-[#FAF8F5] to-[#FFFDF9] border-t border-[#D4AF37]/20 overflow-hidden">
     <!-- Background Glow Effects -->
@@ -1261,6 +1521,8 @@
     </div>
 </section>
 
+
+
 <!-- FAQ Accordion Interactive Script -->
 <script>
     function toggleFaq(button) {
@@ -1357,7 +1619,7 @@
                     Combining evidence-based medical science with aesthetic artistry to deliver personalized skin, hair, and dermatosurgical care.
                 </p>
 
-               <!-- Social Links -->
+<!-- Social Links -->
 <div class="flex items-center gap-3.5 pt-3">
     <a href="https://www.instagram.com/dermrajvi/?hl=en" 
        target="_blank" 
@@ -1365,6 +1627,13 @@
        aria-label="Instagram"
        class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
         <i class="fa-brands fa-instagram text-lg"></i>
+    </a>
+    <a href="https://m.youtube.com/c/DrRajviBheda/videos?ra=m" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="YouTube"
+       class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+        <i class="fa-brands fa-youtube text-base"></i>
     </a>
     <a href="mailto:rajvi.db@gmail.com" 
        aria-label="Email"
@@ -1443,6 +1712,18 @@
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
                         <span><strong class="text-zinc-200">Oshiwara:</strong> Sainit Star</span>
+                    </li>
+                     <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Andheri:</strong> Curis Life Clinic</span>
+                    </li>
+                     <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Andheri:</strong> SBS Multispeciality Hospital</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Vile Parle:</strong> Quest Wellness</span>
                     </li>
                 </ul>
             </div>

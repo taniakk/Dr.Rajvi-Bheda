@@ -266,168 +266,273 @@
 
     <!-- Transformations Gallery Section -->
     <section class="py-20 bg-gradient-to-b from-white via-[#FAF8F5] to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-16">
+            <button onclick="filterResults('all', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37] bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white shadow-md transition-all">
+                All Transformations
+            </button>
+            <button onclick="filterResults('dermatology', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
+                Medical Dermatology
+            </button>
+            <button onclick="filterResults('surgical', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
+                Dermatosurgery & Procedures
+            </button>
+        </div>
+
+        <!-- Transformations Grid (2 Cards Per Row) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
             
-            <!-- Category Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-16">
-                <button onclick="filterResults('all', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37] bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white shadow-md transition-all">
-                    All Transformations
-                </button>
-                <button onclick="filterResults('dermatology', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
-                    Medical Dermatology
-                </button>
-                <button onclick="filterResults('surgical', this)" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium border border-[#D4AF37]/40 bg-white text-zinc-700 hover:text-[#B8860B] hover:border-[#D4AF37] transition-all">
-                    Dermatosurgery & Procedures
-                </button>
+            <!-- CARD 1: XANTHELASMA PALPEBRARUM -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/xanthelesmaafter.jfif" alt="After Xanthelasma Removal" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/xanthelesmabefore.jfif" alt="Before Xanthelasma Removal">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Radiofrequency / TCA Ablation</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Xanthelasma Palpebrarum</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Precision removal of periorbital cholesterol deposits with minimal scar formation and full eyelid tissue preservation.</p>
+                </div>
             </div>
 
-            <!-- Transformations Grid (2 Cards Per Row) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-                
-                <!-- CARD 1: XANTHELASMA PALPEBRARUM -->
-                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/xanthelesmaafter.jfif" alt="After Xanthelasma Removal" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/xanthelesmabefore.jfif" alt="Before Xanthelasma Removal">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
+            <!-- CARD 2: ACNE TREATMENT -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/acneafter.jpeg" alt="After Acne Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/dermatosurgery.jfif" alt="Before Acne Treatment">
                     </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Radiofrequency / TCA Ablation</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Xanthelasma Palpebrarum</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Precision removal of periorbital cholesterol deposits with minimal scar formation and full eyelid tissue preservation.</p>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
                     </div>
                 </div>
-
-                <!-- CARD 2: NAIL LICHEN PLANUS -->
-                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/naillitchen2.jpeg" alt="After Nail Lichen Planus Treatment" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/naillitchen.jpeg" alt="Before Nail Lichen Planus Treatment">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Medical Acne Management</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
                     </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Intralesional Therapy & Topicals</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Nail Lichen Planus</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Targeted medical management arresting matrix destruction and promoting healthy, smooth nail plate regrowth.</p>
-                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Severe Inflammatory Acne</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Comprehensive regimen addressing active inflammatory papules, pustules, and post-inflammatory hyperpigmentation.</p>
                 </div>
-
-                <!-- CARD 3: ACNE TREATMENT -->
-                <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/acneafter.jpeg" alt="After Acne Treatment" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/dermatosurgery.jfif" alt="Before Acne Treatment">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Medical Acne Management</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Severe Inflammatory Acne</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Comprehensive regimen addressing active inflammatory papules, pustules, and post-inflammatory hyperpigmentation.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 4: EARLOBE REPAIR -->
-                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/earloneafter.jfif" alt="After Earlobe Repair" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/earbefore.jpeg" alt="Before Earlobe Repair">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Surgical Reconstruction</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Split Earlobe Repair</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical correction of torn or elongated earlobe piercings with fine suturing for seamless tissue closure.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 5: KELOID DEBULKING -->
-                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/keloidafter.jpeg" alt="After Keloid Debulking" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/keloidbefore.jpeg" alt="Before Keloid Debulking">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Debulking & Intralesional Injections</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Keloid Scar Debulking</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical debulking combined with targeted intralesional therapy to flatten fibrous scar tissue and prevent recurrence.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 6: PYOGENIC GRANULOMA -->
-                <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
-                    <div class="img-comp-container aspect-[16/10] w-full">
-                        <img src="https://ik.imagekit.io/iuiy6mihw/pyogenicafter.jfif" alt="After Pyogenic Granuloma Cautery" class="w-full h-full object-cover">
-                        <div class="img-comp-overlay">
-                            <img src="https://ik.imagekit.io/iuiy6mihw/pyogenicbefore.jfif" alt="Before Pyogenic Granuloma Cautery">
-                        </div>
-                        <div class="img-comp-slider">
-                            <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Excision & Electrocautery</span>
-                            <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Pyogenic Granuloma Removal</h3>
-                        <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Complete excision and base cauterization of vascular lobular capillary hemangioma to eliminate bleeding and ensure clean healing.</p>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Disclaimer Notice -->
-            <div class="mt-16 bg-[#FFF8EC] border border-[#D4AF37]/30 p-6 rounded-2xl max-w-3xl mx-auto text-center">
-                <p class="text-xs text-zinc-600 leading-relaxed">
-                    <strong class="text-zinc-800">Clinical Disclaimer:</strong> Individual treatment outcomes may vary based on anatomical differences, medical history, underlying dermatological conditions, and adherence to post-procedure care protocols. All clinical photographs are displayed with patient authorization.
-                </p>
+            <!-- CARD 3: EARLOBE REPAIR -->
+            <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/earloneafter.jfif" alt="After Earlobe Repair" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/earbefore.jpeg" alt="Before Earlobe Repair">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Surgical Reconstruction</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Split Earlobe Repair</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical correction of torn or elongated earlobe piercings with fine suturing for seamless tissue closure.</p>
+                </div>
             </div>
 
-            <!-- Call to Action -->
-            <div class="mt-12 text-center">
-                <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-10 py-4 text-sm font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5">
-                    Schedule Your Personalized Consultation
-                </a>
+            <!-- CARD 4: KELOID DEBULKING -->
+            <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/keloidafter.jpeg" alt="After Keloid Debulking" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/keloidbefore.jpeg" alt="Before Keloid Debulking">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Debulking & Intralesional Injections</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Keloid Scar Debulking</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Surgical debulking combined with targeted intralesional therapy to flatten fibrous scar tissue and prevent recurrence.</p>
+                </div>
+            </div>
+
+            <!-- CARD 5: PYOGENIC GRANULOMA -->
+            <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/pyogenicafter.jfif" alt="After Pyogenic Granuloma Cautery" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/pyogenicbefore.jfif" alt="Before Pyogenic Granuloma Cautery">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Excision & Electrocautery</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Pyogenic Granuloma Removal</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Complete excision and base cauterization of vascular lobular capillary hemangioma to eliminate bleeding and ensure clean healing.</p>
+                </div>
+            </div>
+
+            <!-- CARD 6: SEBORRHEIC KERATOSIS -->
+            <div class="result-card surgical bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/Seborrheicafter.jpeg" alt="After Seborrheic Keratosis Removal" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/Seborrheicbefore.jpeg" alt="Before Seborrheic Keratosis Removal">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">RF Cauterisation</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Seborrheic Keratosis</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Precise radiofrequency cauterisation of benign hyperkeratotic lesions, achieving smooth skin texture with minimal pigmentation disruption.</p>
+                </div>
+            </div>
+
+            <!-- CARD 7: CONGENITAL ICHTHYOSIFORM ERYTHRODERMA -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/Congenitaafter.jpeg" alt="After Congenital Ichthyosiform Erythroderma Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/Congenitabefore.jpeg" alt="Before Congenital Ichthyosiform Erythroderma Treatment">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Topical Creams & Oral Syrups</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Congenital Ichthyosiform Erythroderma</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Targeted pediatric medical management utilizing barrier-repair topicals and systemic therapy to soften scaling and restore skin barrier function.</p>
+                </div>
+            </div>
+
+            <!-- CARD 8: SYPHILIS MUCOUS PATCHES -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/Mucousafter.jpeg" alt="After Syphilis Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/Mucousbefore.jpeg" alt="Before Syphilis Treatment">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Inj. Benzathine Penicillin</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Mucous Patches of Syphilis</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Targeted antibiotic intervention with intramuscular Benzathine Penicillin leading to complete resolution of secondary syphilitic mucosal lesions.</p>
+                </div>
+            </div>
+
+            <!-- CARD 9: HAND TRANSPLANT GRAFT REACTION -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/Graftafter.jpeg" alt="After Graft Reaction Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/Graftbefore.jpeg" alt="Before Graft Reaction Treatment">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Immunosuppressive Management</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Hand Transplant Cutaneous Graft Reaction</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Successful medical management of acute skin rejection reaction in Maharashtra's first hand transplant patient (Rahul Ahire) at KEM Hospital.</p>
+                </div>
+            </div>
+
+            <!-- CARD 10: FUNGAL INFECTION OF SCALP -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/Fungalafter.jpeg" alt="After Scalp Fungal Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/Fungalbefore.jpeg" alt="Before Scalp Fungal Treatment">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Oral Antifungals & Topical Care</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Scalp Fungal Infection (Tinea Capitis)</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Systemic antifungal tablets combined with therapeutic creams, clearing deep scalp mycotic involvement and supporting hair follicle recovery.</p>
+                </div>
+            </div>
+
+               <!-- CARD 11: NAIL LICHEN PLANUS -->
+            <div class="result-card dermatology bg-white border border-[#D4AF37]/30 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 rounded-2xl">
+                <div class="img-comp-container aspect-[16/10] w-full">
+                    <img src="https://ik.imagekit.io/iuiy6mihw/naillitchen2.jpeg" alt="After Nail Lichen Planus Treatment" class="w-full h-full object-cover">
+                    <div class="img-comp-overlay">
+                        <img src="https://ik.imagekit.io/iuiy6mihw/naillitchen.jpeg" alt="Before Nail Lichen Planus Treatment">
+                    </div>
+                    <div class="img-comp-slider">
+                        <div class="img-comp-button"><i class="fa-solid fa-arrows-left-right text-xs"></i></div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[11px] uppercase font-bold tracking-widest text-[#B8860B]">Intralesional Therapy & Topicals</span>
+                        <span class="text-[#B8860B] text-xs font-semibold bg-[#FFF8E6] px-3 py-1 rounded-full border border-[#D4AF37]/30">Verified Result</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-medium text-zinc-900 mt-1">Nail Lichen Planus</h3>
+                    <p class="text-sm text-zinc-600 mt-3 leading-relaxed">Targeted medical management arresting matrix destruction and promoting healthy, smooth nail plate regrowth.</p>
+                </div>
             </div>
 
         </div>
-    </section>
+
+        <!-- Disclaimer Notice -->
+        <div class="mt-16 bg-[#FFF8EC] border border-[#D4AF37]/30 p-6 rounded-2xl max-w-3xl mx-auto text-center">
+            <p class="text-xs text-zinc-600 leading-relaxed">
+                <strong class="text-zinc-800">Clinical Disclaimer:</strong> Individual treatment outcomes may vary based on anatomical differences, medical history, underlying dermatological conditions, and adherence to post-procedure care protocols. All clinical photographs are displayed with patient authorization.
+            </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-12 text-center">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] px-10 py-4 text-sm font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5">
+                Schedule Your Personalized Consultation
+            </a>
+        </div>
+
+    </div>
+</section>
 
     <!-- Interactive Comparison Slider & Mobile Navigation Script -->
     <script>
@@ -559,7 +664,7 @@
                     Combining evidence-based medical science with aesthetic artistry to deliver personalized skin, hair, and dermatosurgical care.
                 </p>
 
-               <!-- Social Links -->
+<!-- Social Links -->
 <div class="flex items-center gap-3.5 pt-3">
     <a href="https://www.instagram.com/dermrajvi/?hl=en" 
        target="_blank" 
@@ -567,6 +672,13 @@
        aria-label="Instagram"
        class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
         <i class="fa-brands fa-instagram text-lg"></i>
+    </a>
+    <a href="https://m.youtube.com/c/DrRajviBheda/videos?ra=m" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="YouTube"
+       class="w-11 h-11 rounded-full border-2 border-[#D4AF37] bg-[#B8891F]/15 flex items-center justify-center text-[#FFD700] hover:bg-[#D4AF37] hover:text-[#1A1816] hover:border-[#D4AF37] transition-all duration-300 shadow-md hover:shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+        <i class="fa-brands fa-youtube text-base"></i>
     </a>
     <a href="mailto:rajvi.db@gmail.com" 
        aria-label="Email"
@@ -645,6 +757,18 @@
                     <li class="flex items-start gap-2.5">
                         <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
                         <span><strong class="text-zinc-200">Oshiwara:</strong> Sainit Star</span>
+                    </li>
+                     <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Andheri:</strong> Curis Life Clinic</span>
+                    </li>
+                     <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Andheri:</strong> SBS Multispeciality Hospital</span>
+                    </li>
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-[#B8891F] mt-0.5 flex-shrink-0"></i>
+                        <span><strong class="text-zinc-200">Vile Parle:</strong> Quest Wellness</span>
                     </li>
                 </ul>
             </div>
